@@ -2,30 +2,21 @@ import type { Emoji } from './options';
 
 export type DiscordTimestamp = Date | string | null;
 
-const padZeroes = (value: string): string => {
-	const [month, day, year]: string[] = value.split('/');
-	return `${month.padStart(2, '0')}/${day.padStart(2, '0')}/${year}`;
-};
-
-const formatDate = (value: DiscordTimestamp): string | null => {
-	if (!(value instanceof Date)) return value;
-	return padZeroes(`${value.getMonth() + 1}/${value.getDate()}/${value.getFullYear()}`);
-};
-
-const formatTime = (value: DiscordTimestamp, hour24 = false): string | null => {
-	if (!(value instanceof Date)) return value;
-	if (hour24) return `${value.getHours()}:${value.getMinutes().toString().padStart(2, '0')}`;
-	const hour = value.getHours() % 12 || 12;
-	const meridiem = value.getHours() < 12 ? 'AM' : 'PM';
-	return `${hour}:${value.getMinutes().toString().padStart(2, '0')} ${meridiem}`;
-};
-
-export const handleTimestamp = (value: DiscordTimestamp, useTime = false, hour24 = false): string | null => {
+export const handleTimestamp = (value: DiscordTimestamp, hour24 = false): string | null => {
 	if (!(value instanceof Date) && typeof value !== 'string') {
 		throw new TypeError('Timestamp prop must be a Date object or a string.');
 	}
 
-	return useTime ? formatTime(value, hour24) : formatDate(value);
+	return new Date(value)
+		.toLocaleDateString(undefined, {
+			year: 'numeric',
+			month: '2-digit',
+			day: '2-digit',
+			hour: '2-digit',
+			minute: '2-digit',
+			hour12: !hour24
+		})
+		.replace(',', '');
 };
 
 export const getGlobalEmojiUrl = (emojiName: string): Emoji | undefined => window.$discordMessage?.emojis?.[emojiName];
