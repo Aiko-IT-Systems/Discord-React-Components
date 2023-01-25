@@ -1,9 +1,6 @@
 # discord-channel-header
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +9,6 @@
 | `code`     | `code`     | The code to display.            | `string`              | `undefined` |
 | `language` | `language` | The language of the code block. | `string \| undefined` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

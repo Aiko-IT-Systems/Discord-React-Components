@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property      | Attribute      | Description                                                                                                                                                                        | Type                                                                                                           | Default      |
@@ -11,7 +10,6 @@
 | `timestamp`   | `timestamp`    | The timestamp to use for the message date.                                                                                                                                         | `Date \| null \| string`                                                                                       | `new Date()` |
 | `type`        | `type`         | The type of system message this is, this will change the icon shown. Valid values: `join`, `leave`, `call`, `missed-call`, `boost`, `edit`, `thread`, `pin`, `alert`, and `error`. | `"alert" \| "boost" \| "call" \| "edit" \| "error" \| "join" \| "leave" \| "missed-call" \| "pin" \| "thread"` | `'join'`     |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

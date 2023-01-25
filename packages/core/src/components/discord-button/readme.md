@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property    | Attribute    | Description                                                                                                                           | Type                                                     | Default       |
@@ -13,7 +12,6 @@
 | `type`      | `type`       | The type of button this is, this will change the color of the button. Valid values: `primary`, `secondary`, `success`, `destructive`. | `"destructive" \| "primary" \| "secondary" \| "success"` | `'secondary'` |
 | `url`       | `url`        | The URL for the button. Setting this will force the button type to be `secondary`.                                                    | `string`                                                 | `undefined`   |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

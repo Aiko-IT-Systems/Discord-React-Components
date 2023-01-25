@@ -1,6 +1,6 @@
 {
 	"name": "@derockdev/discord-components-react",
-	"version": "3.5.0",
+	"version": "3.5.1",
 	"description": "React bindings for @derockdev/discord-components-core",
 	"author": "@derockdev",
 	"license": "MIT",
@@ -21,7 +21,7 @@
 		"build": "pnpm clean && tsc && gen-esm-wrapper dist/index.js dist/index.mjs && replace-in-file --configFile=scripts/replaceDefaultMod.cjs"
 	},
 	"dependencies": {
-		"@derockdev/discord-components-core": "^3.4.1",
+		"@derockdev/discord-components-core": "^3.5.1",
 		"tslib": "^2.4.0"
 	},
 	"peerDependencies": {

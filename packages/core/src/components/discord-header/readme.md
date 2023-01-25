@@ -1,9 +1,6 @@
 # discord-code-block
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -13,7 +10,6 @@
 | `guild`   | `guild`   | The guild name          | `string`              | `undefined` |
 | `icon`    | `icon`    | The icon to display.    | `string \| undefined` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

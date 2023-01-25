@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property            | Attribute            | Description                                                                                                                   | Type      | Default     |
@@ -17,7 +16,6 @@
 | `server`            | `server`             | Whether the message author is a server crosspost webhook or not. Only works if `bot` is `false` or `undefined`.               | `boolean` | `false`     |
 | `verified`          | `verified`           | Whether the bot is verified or not. Only works if `bot` is `true`                                                             | `boolean` | `false`     |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
