@@ -59,8 +59,8 @@ export const createReactComponent = <
     render() {
       const { children, forwardedRef, style, className, ref, ...cProps } = this.props;
 
-      let propsToPass = Object.keys(cProps).reduce((acc: any, name) => {
-        const value = (cProps as any)[name];
+			let propsToPass = Object.keys(cProps).reduce<ExpandedPropsTypes>((acc: any, name) => {
+				const value = (cProps as any)[name];
 
         if (name.indexOf('on') === 0 && name[2] === name[2].toUpperCase()) {
           const eventName = name.substring(2).toLowerCase();
