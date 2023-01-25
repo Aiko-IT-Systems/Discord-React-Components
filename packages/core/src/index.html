@@ -97,15 +97,30 @@
 			<main>
 				<h3 class="title">A normal conversation</h3>
 				<discord-messages>
-					<discord-header guild="test" channel="general" icon="https://cdn.discordapp.com/icons/553346295163781120/5df9ce4ddd97985e6d27b57b8a6f50bd.webp?size=128">
+					<discord-header
+						guild="test"
+						channel="general"
+						icon="https://cdn.discordapp.com/icons/553346295163781120/5df9ce4ddd97985e6d27b57b8a6f50bd.webp?size=128"
+					>
 						test
 					</discord-header>
-					<discord-header guild="test server" channel="general">
-						channel topic markdown will go here
-					</discord-header>
+					<discord-header guild="test server" channel="general"> channel topic markdown will go here </discord-header>
 					<discord-message author="Alyx Vargas"> Hey guys, I'm new here! Glad to be able to join you all! </discord-message>
-					<discord-message author="Fenton Smart" avatar="/static/avafive.png"> Hi, I'm new here too! <discord-custom-emoji name="party_blob" url="https://cdn.discordapp.com/emojis/818919990635266079.gif" embed-emoji="false"></discord-custom-emoji></discord-message>
-					<discord-message author="Fenton Smart" avatar="/static/avafive.png"><discord-custom-emoji name="party_blob" url="https://cdn.discordapp.com/emojis/850965194821992458.webp?size=96" large-emoji="true"></discord-custom-emoji></discord-message>
+					<discord-message author="Fenton Smart" avatar="/static/avafive.png">
+						Hi, I'm new here too!
+						<discord-custom-emoji
+							name="party_blob"
+							url="https://cdn.discordapp.com/emojis/818919990635266079.gif"
+							embed-emoji="false"
+						></discord-custom-emoji
+					></discord-message>
+					<discord-message author="Fenton Smart" avatar="/static/avafive.png"
+						><discord-custom-emoji
+							name="party_blob"
+							url="https://cdn.discordapp.com/emojis/850965194821992458.webp?size=96"
+							large-emoji="true"
+						></discord-custom-emoji
+					></discord-message>
 					<discord-message profile="maximillian">
 						Hey, <discord-mention>Alyx Vargas</discord-mention> and <discord-mention>Dawn</discord-mention>. Welcome to our server!<br />Be
 						sure to read through the <discord-mention type="channel">rules</discord-mention>. You can ping
@@ -122,37 +137,33 @@
 					</discord-message>
 					<discord-message profile="willard"> s!8ball How am I doing today? </discord-message>
 					<discord-message profile="skyra">
-						Yes. 
+						Yes.
 						<discord-attachments slot="attachments">
-							<discord-attachment
-								type="file"
-								alt="test file"
-								url="/static/testfile.png"
-								size="1.2 MB"
-							/>
+							<discord-attachment type="file" alt="test file" url="/static/testfile.png" size="1.2 MB" />
 						</discord-attachments>
 					</discord-message>
-					<discord-message
-						profile="skyra"
-					>
+					<discord-message profile="skyra">
 						asdf
+						<discord-attachment
+							type="image"
+							size="59.81 KB"
+							slot="attachment"
+							url="https://derock.media/r/Ihbu2w.png"
+							alt="Ihbu2w.png"
+							width="1920"
+							height="1080"
+						></discord-attachment>
+
 						<discord-code-block
 							code="const test = 'asdf'; console.log(test);
 for(let a of b) {}"
 							language="javascript"
 						></discord-code-block>
 
-						<discord-time
-							timestamp="1664412460102"
-							format="R"
-						></discord-time>
+						<discord-time timestamp="1664412460102" format="R"></discord-time>
 
 						<discord-attachments slot="attachments">
-							<discord-attachment
-								type="file"
-								alt="test file"
-								url="/static/testfile.png"
-							/>
+							<discord-attachment type="file" alt="test file" url="/static/testfile.png" />
 						</discord-attachments>
 					</discord-message>
 				</discord-messages>
@@ -489,10 +500,7 @@ for(let a of b) {}"
 									<li>&lt;span class="spoiler"&gt;content&lt;/span&gt; for <span class="spoiler">content</span></li>
 								</ul>
 
-								<discord-code-block
-									code="const test = 'asdf'; console.log(test);"
-									language="javascript"
-								></discord-code-block>
+								<discord-code-block code="const test = 'asdf'; console.log(test);" language="javascript"></discord-code-block>
 							</discord-embed-description>
 						</discord-embed>
 					</discord-message>

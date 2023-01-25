@@ -18,6 +18,13 @@
 	border-radius: 3px;
 }
 
+.discord-attachment .discord-image-wrapper img,
+.discord-attachment .discord-image-wrapper video {
+	max-width: 400px;
+	width: 100%;
+	height: auto;
+}
+
 .discord-attachment-generic {
 	display: flex;
 	width: auto;

@@ -62,7 +62,7 @@ export class DiscordAttachment implements ComponentInterface {
 			case DiscordAttachmentType.IMAGE:
 				return (
 					<Host class="discord-attachment">
-						<div class="discord-image-wrapper" style={{ height: `${this.height}px`, width: `${this.width}px` }}>
+						<div class="discord-image-wrapper">
 							<img alt={this.alt} src={this.url} height={this.height} width={this.width} />
 						</div>
 					</Host>
@@ -71,7 +71,7 @@ export class DiscordAttachment implements ComponentInterface {
 			case DiscordAttachmentType.VIDEO:
 				return (
 					<Host class="discord-attachment">
-						<div class="discord-image-wrapper" style={{ height: `${this.height}px`, width: `${this.width}px` }}>
+						<div class="discord-image-wrapper">
 							<video src={this.url} height={this.height} width={this.width} />
 						</div>
 					</Host>
