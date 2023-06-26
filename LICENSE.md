@@ -1,6 +1,7 @@
 # The MIT License (MIT)
 
-Copyright © `2020` `Aura Román, Jeroen Claassens`
+Copyright (c) 2023 Aiko IT Systems
+Copyright (c) 2020 Aura Román, Jeroen Claassens
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
