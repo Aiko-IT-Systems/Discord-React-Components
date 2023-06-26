@@ -43,7 +43,7 @@
 		"generate": "stencil generate"
 	},
 	"dependencies": {
-		"@stencil/core": "^2.22.1",
+		"@stencil/core": "^4.0.0",
 		"clsx": "^1.2.1",
 		"hex-to-rgba": "^2.0.1",
 		"highlight.js": "^11.6.0"
@@ -80,8 +80,8 @@
 		"stencil"
 	],
 	"devDependencies": {
-		"@sapphire/ts-config": "^3.3.4",
-		"replace-in-file": "^6.3.5",
+		"@sapphire/ts-config": "^4.0.0",
+		"replace-in-file": "^7.0.0",
 		"tslib": "^2.4.0"
 	}
 }
