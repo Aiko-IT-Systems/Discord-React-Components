@@ -1,34 +1,6 @@
-# `Discord Components`
-A fork of [@skyra-project/discord-components](https://github.com/skyra-project/discord-components) designed for use in [discord-html-transcripts](https://github.com/itzderock/discord-html-transcripts)
-
-## Changes
-- Adds `<discord-code-block>`
-- Adds `<discord-header>`
-- Adds better support in `<discord-time>`
-	- Automatically updating based on timestamp and format option
-- Adds better support in `<discord-attachment>`
-	- Adds support for generic attachments, videos, and audio
-(changes also reflected in the react bindings)
-
-## Original README:
-
-<div align="center">
-
 # Discord Components
 
 **Fake Discord messages for the web**
-
-[![License](https://img.shields.io/github/license/skyra-project/discord-components?logo=github&maxAge=3600&style=flat-square)](https://github.com/skyra-project/discord-components/blob/main/LICENSE.md)
-[![Patreon](https://img.shields.io/badge/donate-patreon-F96854.svg?logo=patreon)](https://donate.skyra.pw/patreon)
-
-[![npm](https://img.shields.io/npm/v/@skyra/discord-components-core?color=crimson&logo=npm&style=flat-square&label=@skyra/discord-components-core)](https://www.npmjs.com/package/@skyra/discord-components-core)
-[![npm](https://img.shields.io/npm/v/@skyra/discord-components-react?color=crimson&logo=npm&style=flat-square&label=@skyra/discord-components-react)](https://www.npmjs.com/package/@skyra/discord-components-react)
-
-[![Support Server](https://discord.com/api/guilds/254360814063058944/embed.png?style=banner2)](https://join.skyra.pw)
-
-</div>
-
----
 
 **_Table of Contents_**
 
@@ -48,8 +20,6 @@ A fork of [@skyra-project/discord-components](https://github.com/skyra-project/d
 ## Description
 
 Discord message components to easily build and display fake Discord messages on your webpage.
-
-**This is an adaptation of [wc-discord-message] from [Danktuary]**
 
 ## Features
 
@@ -91,40 +61,26 @@ Discord message components to easily build and display fake Discord messages on 
 
 **_A normal conversation_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/dark_mode/normal_conversation.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/normal_conversation.png)
 
 **_Compact mode_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/dark_mode/compact_mode.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/compact_mode.png)
 
 **_With an embed_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/dark_mode/with_embed.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/with_embed.png)
 
 ### Light Mode
 
 **_A normal conversation_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/light_mode/normal_conversation.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/normal_conversation.png)
 
 **_Compact mode_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/light_mode/compact_mode.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/compact_mode.png)
 
 **_With an embed_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/light_mode/with_embed.png)
-
-## Contributors
-
-Please make sure to read the [Contributing Guide][contributing] before making a pull request.
-
-Thank you to all the people who already contributed to Skyra Project!
-
-<a href="https://github.com/skyra-project/discord-components/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=skyra-project/discord-components" />
-</a>
-
-[contributing]: https://github.com/skyra-project/.github/blob/main/.github/CONTRIBUTING.md
-[wc-discord-message]: https://github.com/Danktuary/wc-discord-message
-[danktuary]: https://github.com/Danktuary
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/with_embed.png)
