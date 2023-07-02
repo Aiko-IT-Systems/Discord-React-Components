@@ -283,6 +283,10 @@ export namespace Components {
          */
         "bot": boolean;
         /**
+          * Whether the author is clyde.
+         */
+        "clyde": boolean;
+        /**
           * Whether the message has been edited or not.
          */
         "edited": boolean;
@@ -332,6 +336,10 @@ export namespace Components {
         "verified": boolean;
     }
     interface DiscordMessages {
+        /**
+          * Whether to use amoled theme or not.
+         */
+        "amoledTheme": boolean;
         /**
           * Whether to use compact mode or not.
          */
@@ -426,8 +434,6 @@ export namespace Components {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified": boolean;
-    }
-    interface DiscordSelectComponent {
     }
     interface DiscordSpoiler {
     }
@@ -666,12 +672,6 @@ declare global {
         prototype: HTMLDiscordReplyElement;
         new (): HTMLDiscordReplyElement;
     };
-    interface HTMLDiscordSelectComponentElement extends Components.DiscordSelectComponent, HTMLStencilElement {
-    }
-    var HTMLDiscordSelectComponentElement: {
-        prototype: HTMLDiscordSelectComponentElement;
-        new (): HTMLDiscordSelectComponentElement;
-    };
     interface HTMLDiscordSpoilerElement extends Components.DiscordSpoiler, HTMLStencilElement {
     }
     var HTMLDiscordSpoilerElement: {
@@ -739,7 +739,6 @@ declare global {
         "discord-reaction": HTMLDiscordReactionElement;
         "discord-reactions": HTMLDiscordReactionsElement;
         "discord-reply": HTMLDiscordReplyElement;
-        "discord-select-component": HTMLDiscordSelectComponentElement;
         "discord-spoiler": HTMLDiscordSpoilerElement;
         "discord-system-message": HTMLDiscordSystemMessageElement;
         "discord-tenor-video": HTMLDiscordTenorVideoElement;
@@ -1025,6 +1024,10 @@ declare namespace LocalJSX {
          */
         "bot"?: boolean;
         /**
+          * Whether the author is clyde.
+         */
+        "clyde"?: boolean;
+        /**
           * Whether the message has been edited or not.
          */
         "edited"?: boolean;
@@ -1074,6 +1077,10 @@ declare namespace LocalJSX {
         "verified"?: boolean;
     }
     interface DiscordMessages {
+        /**
+          * Whether to use amoled theme or not.
+         */
+        "amoledTheme"?: boolean;
         /**
           * Whether to use compact mode or not.
          */
@@ -1168,8 +1175,6 @@ declare namespace LocalJSX {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified"?: boolean;
-    }
-    interface DiscordSelectComponent {
     }
     interface DiscordSpoiler {
     }
@@ -1287,7 +1292,6 @@ declare namespace LocalJSX {
         "discord-reaction": DiscordReaction;
         "discord-reactions": DiscordReactions;
         "discord-reply": DiscordReply;
-        "discord-select-component": DiscordSelectComponent;
         "discord-spoiler": DiscordSpoiler;
         "discord-system-message": DiscordSystemMessage;
         "discord-tenor-video": DiscordTenorVideo;
@@ -1325,7 +1329,6 @@ declare module "@stencil/core" {
             "discord-reaction": LocalJSX.DiscordReaction & JSXBase.HTMLAttributes<HTMLDiscordReactionElement>;
             "discord-reactions": LocalJSX.DiscordReactions & JSXBase.HTMLAttributes<HTMLDiscordReactionsElement>;
             "discord-reply": LocalJSX.DiscordReply & JSXBase.HTMLAttributes<HTMLDiscordReplyElement>;
-            "discord-select-component": LocalJSX.DiscordSelectComponent & JSXBase.HTMLAttributes<HTMLDiscordSelectComponentElement>;
             "discord-spoiler": LocalJSX.DiscordSpoiler & JSXBase.HTMLAttributes<HTMLDiscordSpoilerElement>;
             "discord-system-message": LocalJSX.DiscordSystemMessage & JSXBase.HTMLAttributes<HTMLDiscordSystemMessageElement>;
             "discord-tenor-video": LocalJSX.DiscordTenorVideo & JSXBase.HTMLAttributes<HTMLDiscordTenorVideoElement>;

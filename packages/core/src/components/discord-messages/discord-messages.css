@@ -43,6 +43,11 @@
 	border-color: #dedede;
 }
 
+.discord-messages.discord-amoled-theme {
+	color: #fff;
+	background-color: #020202;
+}
+
 .discord-messages.discord-no-background {
 	background-color: unset;
 }

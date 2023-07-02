@@ -153,6 +153,7 @@
 .discord-embed .discord-embed.media .discord-embed-image {
 	overflow: hidden;
 	position: relative;
+	-webkit-user-select: text;
 	user-select: text;
 }
 

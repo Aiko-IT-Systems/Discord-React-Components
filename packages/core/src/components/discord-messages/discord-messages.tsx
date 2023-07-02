@@ -14,6 +14,12 @@ export class DiscordMessages implements ComponentInterface {
 	public lightTheme: boolean;
 
 	/**
+	 * Whether to use amoled theme or not.
+	 */
+	@Prop({ mutable: true, reflect: true })
+	public amoledTheme: boolean;
+
+	/**
 	 * Whether to exclude the background or not.
 	 */
 	@Prop({ mutable: true, reflect: true })
@@ -28,6 +34,10 @@ export class DiscordMessages implements ComponentInterface {
 	public componentWillRender() {
 		if (this.lightTheme || (defaultTheme === 'light' && this.lightTheme)) {
 			this.lightTheme = true;
+		}
+
+		if (this.amoledTheme || (defaultTheme === 'amoled' && this.amoledTheme)) {
+			this.amoledTheme = true;
 		}
 
 		if (this.compactMode || (defaultMode === 'compact' && this.compactMode)) {
@@ -45,6 +55,7 @@ export class DiscordMessages implements ComponentInterface {
 				class={clsx(
 					{
 						'discord-light-theme': this.lightTheme,
+						'discord-amoled-theme': this.amoledTheme,
 						'discord-compact-mode': this.compactMode,
 						'discord-no-background': this.noBackground
 					},
