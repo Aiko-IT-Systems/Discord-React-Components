@@ -13,6 +13,7 @@
 | `embedTitle`  | `embed-title`  | The embed title.                                                                                                                       | `string` | `undefined` |
 | `image`       | `image`        | The embed image to use (displayed at the bottom).                                                                                      | `string` | `undefined` |
 | `provider`    | `provider`     | The provider to show above the embed, for example for YouTube videos it will show "YouTube" at the top of the embed (above the author) | `string` | `undefined` |
+| `providerUrl` | `provider-url` | The URL to open when you click on the embed provider.                                                                                  | `string` | `undefined` |
 | `thumbnail`   | `thumbnail`    | The thumbnail image to use.                                                                                                            | `string` | `undefined` |
 | `url`         | `url`          | The URL to open when you click on the embed title.                                                                                     | `string` | `undefined` |
 | `video`       | `video`        | The embed video to use (displayed at the bottom, same slot as the image).                                                              | `string` | `undefined` |

@@ -9,6 +9,7 @@
 | `author`     | `author`      | The message author's username.                                                                                                | `string`                 | `'User'`     |
 | `avatar`     | `avatar`      | The message author's avatar. Can be an avatar shortcut, relative path, or external link.                                      | `string`                 | `undefined`  |
 | `bot`        | `bot`         | Whether the message author is a bot or not. Only works if `server` is `false` or `undefined`.                                 | `boolean`                | `false`      |
+| `clyde`      | `clyde`       | Whether the author is clyde.                                                                                                  | `boolean`                | `false`      |
 | `edited`     | `edited`      | Whether the message has been edited or not.                                                                                   | `boolean`                | `false`      |
 | `ephemeral`  | `ephemeral`   | Whether to make this message ephemeral.                                                                                       | `boolean`                | `false`      |
 | `highlight`  | `highlight`   | Whether to highlight this message.                                                                                            | `boolean`                | `false`      |
@@ -21,7 +22,6 @@
 | `timestamp`  | `timestamp`   | The timestamp to use for the message date.                                                                                    | `Date \| null \| string` | `new Date()` |
 | `twentyFour` | `twenty-four` | Whether to use 24-hour format for the timestamp.                                                                              | `boolean`                | `false`      |
 | `verified`   | `verified`    | Whether the bot is verified or not. Only works if `bot` is `true`                                                             | `boolean`                | `false`      |
-| `clyde`      | `clyde`       | Whether the message author is clyde.                                                                                          | `boolean`                | `false`      |
 
 ---
 

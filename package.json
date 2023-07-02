@@ -11,8 +11,7 @@
 		"start": "yarn workspace @aitsys/discord-components-core start",
 		"build": "yarn clean && yarn build:core && yarn build:react && yarn lint && yarn format",
 		"build:core": "yarn workspace @aitsys/discord-components-core build",
-		"build:react": "yarn workspace @aitsys/discord-components-react build",
-		"postinstall": "husky install .github/husky"
+		"build:react": "yarn workspace @aitsys/discord-components-react build"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.6",
