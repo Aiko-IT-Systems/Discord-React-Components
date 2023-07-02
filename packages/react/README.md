@@ -1,26 +1,19 @@
-# `@derockdev/discord-components-react`
-A fork of [@skyra/discord-components-react](https://github.com/skyra-project/discord-components) designed for use in [discord-html-transcripts](https://github.com/itzderock/discord-html-transcripts)
+# `@aitsys/discord-components-react`
 
 ## Changes
-- Adds all the new components in `@derockdev/discord-components-core`
+- Adds all the new components in `@aitsys/discord-components-core`
 
 ## Original README
 
 <div align="center">
 
-# @skyra/discord-components-react
+# @aitsys/discord-components-react
 
-**React bindings for [@skyra/discord-components-core](https://github.com/skyra-project/discord-components/tree/main/packages/core)**
-
-[![License](https://img.shields.io/github/license/skyra-project/discord-components?logo=github&maxAge=3600&style=flat-square)](https://github.com/skyra-project/discord-components/blob/main/LICENSE.md)
-[![Patreon](https://img.shields.io/badge/donate-patreon-F96854.svg?logo=patreon)](https://donate.skyra.pw/patreon)
-
-[![npm](https://img.shields.io/npm/v/@skyra/discord-components-react?color=crimson&logo=npm&style=flat-square&label=@skyra/discord-components-react)](https://www.npmjs.com/package/@skyra/discord-components-react)
-[![npm](https://img.shields.io/npm/dt/@skyra/discord-components-react.svg?maxAge=3600&logo=npm)](https://www.npmjs.com/package/@skyra/discord-components-react)
-[![npm](https://img.shields.io/bundlephobia/min/@skyra/discord-components-react?label=minified&logo=webpack&maxAge=3600)](https://bundlephobia.com/result?p=@skyra/discord-components-react)
+**React bindings for [@aitsys/discord-components-core](https://github.com/Aiko-IT-Systems/Discord-React-Components/tree/main/packages/core)**
+[![npm](https://img.shields.io/npm/v/@aitsys/discord-components-react?color=crimson&logo=npm&style=flat-square&label=@aitsys/discord-components-react)](https://www.npmjs.com/package/@aitsys/discord-components-react)
+[![npm](https://img.shields.io/npm/dt/@aitsys/discord-components-react.svg?maxAge=3600&logo=npm)](https://www.npmjs.com/package/@aitsys/discord-components-react)
+[![npm](https://img.shields.io/bundlephobia/min/@aitsys/discord-components-react?label=minified&logo=webpack&maxAge=3600)](https://bundlephobia.com/result?p=@aitsys/discord-components-react)
 [![Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d)](https://stenciljs.com)
-
-[![Support Server](https://discord.com/api/guilds/254360814063058944/embed.png?style=banner2)](https://join.skyra.pw)
 
 </div>
 
@@ -28,7 +21,7 @@ A fork of [@skyra/discord-components-react](https://github.com/skyra-project/dis
 
 **_Table of Contents_**
 
--   [@skyra/discord-components-react](#skyradiscord-components-react)
+-   [@aitsys/discord-components-react](#skyradiscord-components-react)
     -   [Description](#description)
     -   [Features](#features)
     -   [Installation](#installation)
@@ -71,8 +64,8 @@ Discord message components to easily build and display fake Discord messages on 
 ## Installation
 
 ```bash
-yarn add @skyra/discord-components-core @skyra/discord-components-react
-# or npm install @skyra/discord-components-core @skyra/discord-components-react
+yarn add @aitsys/discord-components-core @aitsys/discord-components-react
+# or npm install @aitsys/discord-components-core @aitsys/discord-components-react
 ```
 
 ## Usage
@@ -108,7 +101,7 @@ The syntax is kept fairly simple. Here's a basic example of a regular conversati
 This module uses a custom object on the browser `window` for configuration. In order to this you will need to include the following snippet in your source code when working in TypeScript:
 
 ```ts
-import type { DiscordMessageOptions } from '@skyra/discord-components-core/dist/types/options';
+import type { DiscordMessageOptions } from '@aitsys/discord-components-core/dist/types/options';
 
 declare global {
 	interface Window {
@@ -251,41 +244,26 @@ At least 2 consecutive fields need to be marked as inline in order for them to a
 
 **_A normal conversation_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/dark_mode/normal_conversation.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/normal_conversation.png)
 
 **_Compact mode_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/dark_mode/compact_mode.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/compact_mode.png)
 
 **_With an embed_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/dark_mode/with_embed.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/with_embed.png)
 
 ### Light Mode
 
 **_A normal conversation_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/light_mode/normal_conversation.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/normal_conversation.png)
 
 **_Compact mode_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/light_mode/compact_mode.png)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/compact_mode.png)
 
 **_With an embed_**
 
-![](https://raw.githubusercontent.com/skyra-project/discord-components/main/assets/light_mode/with_embed.png)
-
-## Contributors
-
-Please make sure to read the [Contributing Guide][contributing] before making a pull request.
-
-Thank you to all the people who already contributed to Skyra Project!
-
-<a href="https://github.com/skyra-project/discord-components/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=skyra-project/discord-components" />
-</a>
-
-[contributing]: https://github.com/skyra-project/.github/blob/main/.github/CONTRIBUTING.md
-[wc-discord-message]: https://github.com/Danktuary/wc-discord-message
-[danktuary]: https://github.com/Danktuary
-[the respective folder]: (https://github.com/skyra-project/discord-components/blob/main/packages/core/src/components/)
+![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/with_embed.png)

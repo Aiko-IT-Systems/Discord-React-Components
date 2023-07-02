@@ -3,9 +3,9 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import type { JSX } from '@derockdev/discord-components-core';
+import type { JSX } from '@aitsys/discord-components-core';
 
-import { defineCustomElements } from '@derockdev/discord-components-core/loader';
+import { defineCustomElements } from '@aitsys/discord-components-core/loader';
 
 defineCustomElements();
 export const DiscordActionRow = /*@__PURE__*/ createReactComponent<JSX.DiscordActionRow, HTMLDiscordActionRowElement>('discord-action-row');
