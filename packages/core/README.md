@@ -1,84 +1,5 @@
 # `@aitsys/discord-components-core`
 
-## Changes
-- Adds `<discord-code-block>`
-- Adds `<discord-header>`
-- Adds better support in `<discord-time>`
-	- Automatically updating based on timestamp and format option
-- Adds better support in `<discord-attachment>`
-	- Adds support for generic attachments, videos, and audio
-
-## Original README:
-
-<div align="center">
-
-**Web components to easily build and display fake Discord messages on your webpages**
-
-[![npm](https://img.shields.io/npm/v/@aitsys/discord-components-core?color=crimson&logo=npm&style=flat-square&label=@aitsys/discord-components-core)](https://www.npmjs.com/package/@aitsys/discord-components-core)
-[![npm](https://img.shields.io/npm/dt/@aitsys/discord-components-core.svg?maxAge=3600&logo=npm)](https://www.npmjs.com/package/@aitsys/discord-components-core)
-[![npm](https://img.shields.io/bundlephobia/min/@aitsys/discord-components-core?label=minified&logo=webpack&maxAge=3600)](https://bundlephobia.com/result?p=@aitsys/discord-components-core)
-[![Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d)](https://stenciljs.com)
-
-</div>
-
----
-
-**_Table of Contents_**
-
--   [@aitsys/discord-components-core](#skyradiscord-components-core)
-    -   [Description](#description)
-    -   [Features](#features)
-    -   [Installation](#installation)
-    -   [Usage](#usage)
-    -   [Framework Integration](#framework-integration)
-        -   [Angular](#angular)
-        -   [Live Demo](#live-demo)
-        -   [Sample code](#sample-code)
-            -   [Including the Custom Element Schema](#including-the-custom-element-schema)
-            -   [Calling defineCustomElements](#calling-definecustomelements)
-                -   [Edge (Chakra Core) and IE11 polyfills](#edge-chakra-core-and-ie11-polyfills)
-        -   [React](#react)
-            -   [Live Demo (Create React App)](#live-demo-create-react-app)
-            -   [Live Demo (NextJS)](#live-demo-nextjs)
-            -   [Sample code](#sample-code-1)
-        -   [Vue](#vue)
-            -   [Live Demo](#live-demo-1)
-            -   [Sample code](#sample-code-2)
-        -   [No Framework](#no-framework)
-            -   [Live Demo](#live-demo-2)
-            -   [Sample Code](#sample-code)
-    -   [Notes](#notes)
-        -   [TypeScript module augments](#typescript-module-augments)
-        -   [Avatar shortcuts](#avatar-shortcuts)
-        -   [Profile shortcuts](#profile-shortcuts)
-        -   [Theming](#theming)
-        -   [Components notes](#components-notes)
-            -   [discord-messages component](#discord-messages-component)
-            -   [discord-mention component](#discord-mention-component)
-            -   [DiscordEmbed component](#discordembed-component)
-            -   [EmbedFields component](#embedfields-component)
-            -   [EmbedField component](#embedfield-component)
-    -   [Screenshots](#screenshots)
-        -   [Dark Mode](#dark-mode)
-        -   [Light Mode](#light-mode)
-    -   [Contributors](#contributors)
-
-## Description
-
-Discord message components to easily build and display fake Discord messages on your webpage.
-
-**This is an adaptation of [wc-discord-message] from [Danktuary]**
-
-## Features
-
--   Design modelled after [Discord](https://discord.com/) itself
--   Comfy and compact mode support
--   Dark and light themes support
--   Set the message author's username, avatar (use defaults or provide your own), role color, and "bot" tag status
--   Display fake user, role, and channel mentions
--   Complete embed support
--   Simple syntax!
-
 ## Installation
 
 ```bash
@@ -103,10 +24,6 @@ The syntax is kept fairly simple. Here's a basic example of a regular conversati
 ## Framework Integration
 
 ### Angular
-
-### Live Demo
-
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/discord-components-angular-0xz0z)
 
 ### Sample code
 
@@ -168,23 +85,11 @@ applyPolyfills().then(() => {
 
 ### React
 
-#### Live Demo (Create React App)
-
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/discord-components-create-react-app-64k90)
-
-#### Live Demo (NextJS)
-
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/discord-components-nextjs-ovqfu)
-
 #### Sample code
 
 See [@aitsys/discord-components-react](https://github.com/Aiko-IT-Systems/Discord-React-Components/tree/main/packages/react)
 
 ### Vue
-
-#### Live Demo
-
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/discord-components-vue-g1w48)
 
 #### Sample code
 
@@ -226,10 +131,6 @@ The components should then be available in any of the Vue templates
 ```
 
 ### No Framework
-
-#### Live Demo
-
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/discord-components-static-nhwkl)
 
 #### Sample Code
 
@@ -376,33 +277,3 @@ At least 2 consecutive fields need to be marked as inline in order for them to a
 	</DiscordEmbed>
 </discord-message>
 ```
-
-## Screenshots
-
-### Dark Mode
-
-**_A normal conversation_**
-
-![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/normal_conversation.png)
-
-**_Compact mode_**
-
-![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/compact_mode.png)
-
-**_With an embed_**
-
-![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/dark_mode/with_embed.png)
-
-### Light Mode
-
-**_A normal conversation_**
-
-![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/normal_conversation.png)
-
-**_Compact mode_**
-
-![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/compact_mode.png)
-
-**_With an embed_**
-
-![](https://raw.githubusercontent.com/Aiko-IT-Systems/Discord-React-Components/main/assets/light_mode/with_embed.png)
