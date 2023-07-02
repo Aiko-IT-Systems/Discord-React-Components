@@ -83,6 +83,12 @@ export class DiscordEmbed implements ComponentInterface {
 	@Prop()
 	public provider: string;
 
+	/**
+	 * The URL to open when you click on the embed provider.
+	 */
+	@Prop()
+	public providerUrl: string;
+
 	private hasPerformedRerenderChecks: 'dirty' | 'pristine' = 'pristine';
 
 	@State()
@@ -111,7 +117,13 @@ export class DiscordEmbed implements ComponentInterface {
 						<div class="discord-embed-grid">
 							{this.provider && (
 								<div class="discord-embed-provider">
-									<Fragment>{this.provider}</Fragment>
+									{this.providerUrl ? (
+										<a href={this.providerUrl} target="_blank" class="discord-provider" rel="noopener noreferrer">
+											{this.provider}
+										</a>
+									) : (
+										<Fragment>{this.provider}</Fragment>
+									)}
 								</div>
 							)}
 							{emojiParsedAuthorName && (

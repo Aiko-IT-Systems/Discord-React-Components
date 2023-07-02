@@ -21,7 +21,7 @@
 .discord-attachment .discord-image-wrapper img,
 .discord-attachment .discord-image-wrapper video {
 	max-width: 400px;
-	width: 100%;
+	/*width: 100%;*/
 	height: auto;
 }
 
@@ -51,6 +51,7 @@
 
 .discord-attachment-generic-inner {
 	flex-grow: 1;
+	width: -moz-fit-content;
 	width: fit-content;
 	height: 100%;
 }
@@ -66,6 +67,7 @@
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	width: -moz-fit-content;
 	width: fit-content;
 }
 

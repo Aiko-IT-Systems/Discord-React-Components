@@ -70,6 +70,10 @@
 	object-position: top center;
 }
 
+.discord-embed a.discord-provider {
+	color: #6F9C8E;
+}
+
 .discord-embed .discord-embed-author {
 	-webkit-box-align: center;
 	align-items: center;

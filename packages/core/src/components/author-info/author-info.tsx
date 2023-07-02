@@ -70,21 +70,21 @@ export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
 		{
 			<Fragment>
 				{/* If bot is true then we need to render a Bot tag */}
-				{!bot && !server && clyde && (
+				{clyde && (
 					<span class="discord-application-tag discord-application-tag-clyde">
 						{/* If verified is true then a verified checkmark should be prefixed */}
 						{clyde && <ClydeAiTag />}
 						AI
 					</span>
 				)}
-				{bot && !server && (
+				{bot && !server && !clyde && (
 					<span class="discord-application-tag">
 						{/* If verified is true then a verified checkmark should be prefixed */}
 						{verified && <VerifiedTick />}
 						Bot
 					</span>
 				)}
-				{server && !bot && <span class="discord-application-tag">Server</span>}
+				{server && !bot && !clyde && <span class="discord-application-tag">Server</span>}
 				{op && <span class="discord-application-tag discord-application-tag-op">OP</span>}
 			</Fragment>
 		}

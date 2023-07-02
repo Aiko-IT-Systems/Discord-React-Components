@@ -141,17 +141,18 @@
 				</discord-message>
 				<discord-message profile="skyra">
 					asdf
-					<discord-attachment type="image" size="59.81 KB" slot="attachment"
-						url="https://derock.media/r/Ihbu2w.png" alt="Ihbu2w.png" width="1920"
-						height="1080"></discord-attachment>
-
 					<discord-code-block code="const test = 'asdf'; console.log(test);
 for(let a of b) {}" language="javascript"></discord-code-block>
 
 					<discord-time timestamp="1664412460102" format="R"></discord-time>
 
 					<discord-attachments slot="attachments">
-						<discord-attachment type="file" alt="test file" url="/static/testfile.png" />
+						<discord-attachment type="file" slot="attachment" alt="test file" url="/static/testfile.png" />
+					</discord-attachments>
+					<discord-attachments>
+						<discord-attachment type="image" size="59.81 KB" slot="attachment"
+						url="https://derock.media/r/Ihbu2w.png" alt="Ihbu2w.png" width="1920"
+						height="1080"></discord-attachment>
 					</discord-attachments>
 				</discord-message>
 			</discord-messages>
@@ -267,10 +268,12 @@ for(let a of b) {}" language="javascript"></discord-code-block>
 			</discord-messages>
 			<h3 class="title">Image Attachments with small images</h3>
 			<discord-messages>
-				<discord-message profile="Alyx Vargas">
+				<discord-message profile="lulalaby">
 					That's a very small logo image!
-					<discord-attachment slot="attachments" url="/static/stencil.png" height="100" width="100"
+					<discord-attachments>
+						<discord-attachment slot="attachment" url="/static/stencil.png" height="100" width="100"
 						alt="stencil-logo" type="image" />
+					</discord-attachments>
 				</discord-message>
 			</discord-messages>
 			<h3 class="title">Image Attachments with large images</h3>
@@ -411,9 +414,24 @@ for(let a of b) {}" language="javascript"></discord-code-block>
 					</discord-attachments>
 				</discord-message>
 			</discord-messages>
+			<h3 class="title">Selects</h3>
+			<discord-messages>
+				<discord-message profile="skyra">
+					Here is a select!
+					<discord-attachments slot="components">
+						<discord-action-row>
+							<discord-select>a</discord-select>
+						</discord-action-row>
+					</discord-attachments>
+				</discord-message>
+			</discord-messages>
 			<h3 class="title">Verified Discord bots</h3>
 			<discord-messages>
 				<discord-message profile="skyra"> Wow I just got verified! </discord-message>
+			</discord-messages>
+			<h3 class="title">Clyde</h3>
+			<discord-messages>
+				<discord-message clyde="true">I am your friendly neighborhood chatbot! Here to help with any questions or chat. 😄</discord-message>
 			</discord-messages>
 			<h3 class="title">Full embed example</h3>
 			<discord-messages>
@@ -534,10 +552,11 @@ for(let a of b) {}" language="javascript"></discord-code-block>
 			<h3 class="title">Embedded video</h3>
 			<discord-messages>
 				<discord-message profile="skyra">
-					<discord-embed slot="embeds" provider="Blender" author-name="Blender"
-						author-url="https://peach.blender.org/download/" color="#019DD8" embed-title="Big Buck Bunny"
-						video="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg"
-						url="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg">
+					<discord-embed slot="embeds" provider="YouTube" author-name="Raon" provider-url="https://www.youtube.com"
+						author-url="https://www.youtube.com/channel/UCQn1FqrR2OCjSe6Nl4GlVHw" color="#FF0000" embed-title="Raon 라온 | ‘クネクネ (Wiggle Wiggle)’ M/V"
+						video="https://cdn.aitsys.dev/file/data/q2tzqoz7ua7sfyeulapq/PHID-FILE-3det2pn34p5chh4enez4/38-cJT320aw.mp4"
+						url="https://www.youtube.com/watch?v=38-cJT320aw"
+						image="https://cdn.aitsys.dev/file/data/kcrwt6baxsmr32rjnrdg/PHID-FILE-2w72lbyg6lrbstqo3geh/38-cJT320aw.jpg"></discord-embed>
 					</discord-embed>
 				</discord-message>
 			</discord-messages>

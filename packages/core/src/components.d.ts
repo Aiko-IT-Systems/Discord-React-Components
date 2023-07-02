@@ -146,6 +146,10 @@ export namespace Components {
          */
         "provider": string;
         /**
+          * The URL to open when you click on the embed provider.
+         */
+        "providerUrl": string;
+        /**
           * The thumbnail image to use.
          */
         "thumbnail": string;
@@ -435,6 +439,20 @@ export namespace Components {
          */
         "verified": boolean;
     }
+    interface DiscordSelect {
+        /**
+          * Whether to show the button as disabled.
+         */
+        "disabled": boolean;
+        /**
+          * The emoji URL to use in the button.
+         */
+        "emoji": string;
+        /**
+          * The name of the emoji used in the button.
+         */
+        "emojiName": string;
+    }
     interface DiscordSpoiler {
     }
     interface DiscordSystemMessage {
@@ -672,6 +690,12 @@ declare global {
         prototype: HTMLDiscordReplyElement;
         new (): HTMLDiscordReplyElement;
     };
+    interface HTMLDiscordSelectElement extends Components.DiscordSelect, HTMLStencilElement {
+    }
+    var HTMLDiscordSelectElement: {
+        prototype: HTMLDiscordSelectElement;
+        new (): HTMLDiscordSelectElement;
+    };
     interface HTMLDiscordSpoilerElement extends Components.DiscordSpoiler, HTMLStencilElement {
     }
     var HTMLDiscordSpoilerElement: {
@@ -739,6 +763,7 @@ declare global {
         "discord-reaction": HTMLDiscordReactionElement;
         "discord-reactions": HTMLDiscordReactionsElement;
         "discord-reply": HTMLDiscordReplyElement;
+        "discord-select": HTMLDiscordSelectElement;
         "discord-spoiler": HTMLDiscordSpoilerElement;
         "discord-system-message": HTMLDiscordSystemMessageElement;
         "discord-tenor-video": HTMLDiscordTenorVideoElement;
@@ -886,6 +911,10 @@ declare namespace LocalJSX {
           * @example YouTube
          */
         "provider"?: string;
+        /**
+          * The URL to open when you click on the embed provider.
+         */
+        "providerUrl"?: string;
         /**
           * The thumbnail image to use.
          */
@@ -1176,6 +1205,20 @@ declare namespace LocalJSX {
          */
         "verified"?: boolean;
     }
+    interface DiscordSelect {
+        /**
+          * Whether to show the button as disabled.
+         */
+        "disabled"?: boolean;
+        /**
+          * The emoji URL to use in the button.
+         */
+        "emoji"?: string;
+        /**
+          * The name of the emoji used in the button.
+         */
+        "emojiName"?: string;
+    }
     interface DiscordSpoiler {
     }
     interface DiscordSystemMessage {
@@ -1292,6 +1335,7 @@ declare namespace LocalJSX {
         "discord-reaction": DiscordReaction;
         "discord-reactions": DiscordReactions;
         "discord-reply": DiscordReply;
+        "discord-select": DiscordSelect;
         "discord-spoiler": DiscordSpoiler;
         "discord-system-message": DiscordSystemMessage;
         "discord-tenor-video": DiscordTenorVideo;
@@ -1329,6 +1373,7 @@ declare module "@stencil/core" {
             "discord-reaction": LocalJSX.DiscordReaction & JSXBase.HTMLAttributes<HTMLDiscordReactionElement>;
             "discord-reactions": LocalJSX.DiscordReactions & JSXBase.HTMLAttributes<HTMLDiscordReactionsElement>;
             "discord-reply": LocalJSX.DiscordReply & JSXBase.HTMLAttributes<HTMLDiscordReplyElement>;
+            "discord-select": LocalJSX.DiscordSelect & JSXBase.HTMLAttributes<HTMLDiscordSelectElement>;
             "discord-spoiler": LocalJSX.DiscordSpoiler & JSXBase.HTMLAttributes<HTMLDiscordSpoilerElement>;
             "discord-system-message": LocalJSX.DiscordSystemMessage & JSXBase.HTMLAttributes<HTMLDiscordSystemMessageElement>;
             "discord-tenor-video": LocalJSX.DiscordTenorVideo & JSXBase.HTMLAttributes<HTMLDiscordTenorVideoElement>;

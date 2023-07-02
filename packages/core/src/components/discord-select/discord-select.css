@@ -1,0 +1,32 @@
+.discord-select {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	margin: 4px 8px 4px 0;
+	padding: 2px 16px;
+	width: auto;
+	height: 32px;
+	min-width: 60px;
+	min-height: 32px;
+	-webkit-transition: background-color 0.17s ease, color 0.17s ease;
+	transition: background-color 0.17s ease, color 0.17s ease;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	text-decoration: none !important;
+}
+
+.discord-select.discord-select-disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.discord-select .discord-select-emoji {
+	margin-right: 4px;
+	object-fit: contain;
+	width: 1.375em;
+	height: 1.375em;
+	vertical-align: bottom;
+}
