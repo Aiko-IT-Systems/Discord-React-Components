@@ -21,6 +21,7 @@
 | `timestamp`  | `timestamp`   | The timestamp to use for the message date.                                                                                    | `Date \| null \| string` | `new Date()` |
 | `twentyFour` | `twenty-four` | Whether to use 24-hour format for the timestamp.                                                                              | `boolean`                | `false`      |
 | `verified`   | `verified`    | Whether the bot is verified or not. Only works if `bot` is `true`                                                             | `boolean`                | `false`      |
+| `clyde`      | `clyde`       | Whether the message author is clyde.                                                                                          | `boolean`                | `false`      |
 
 ---
 
