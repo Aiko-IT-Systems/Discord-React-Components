@@ -27,7 +27,7 @@ export namespace Components {
         /**
           * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file'
          */
-        "type": 'image' | 'video' | 'audio' | 'file';
+        "type": 'image' | 'video' | 'audio' | 'file' | 'voice';
         /**
           * The URL for the image attachment
           * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff)$/i`
@@ -793,7 +793,7 @@ declare namespace LocalJSX {
         /**
           * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file'
          */
-        "type"?: 'image' | 'video' | 'audio' | 'file';
+        "type"?: 'image' | 'video' | 'audio' | 'file' | 'voice';
         /**
           * The URL for the image attachment
           * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff)$/i`
