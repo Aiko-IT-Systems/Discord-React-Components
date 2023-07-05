@@ -596,17 +596,17 @@ __metadata:
   linkType: hard
 
 "@sapphire/eslint-config@npm:^4.3.8":
-  version: 4.4.2
-  resolution: "@sapphire/eslint-config@npm:4.4.2"
+  version: 4.4.3
+  resolution: "@sapphire/eslint-config@npm:4.4.3"
   dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.59.2
-    "@typescript-eslint/parser": ^5.59.2
-    eslint: ^8.39.0
+    "@typescript-eslint/eslint-plugin": ^5.61.0
+    "@typescript-eslint/parser": ^5.61.0
+    eslint: ^8.44.0
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^4.2.1
     prettier: ^2.8.8
-    typescript: ^5.0.4
-  checksum: 92f7e12d987e6525a9f333a10678962e295153b24e73c917ccbefba5f03b95976e5a17c7fb63d0e34095afd5d50085753052f7c488e3975826e4deb87b341af6
+    typescript: ^5.1.6
+  checksum: 37fc27ae1fc56865afea15f53d8f6558178b196f412e10bba69ec0cb43602b4af39b2b907053757ee9c6d6f059e9d8261820a526ce2843f8b481af9566d76f9f
   languageName: node
   linkType: hard
 
@@ -786,7 +786,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.48.2, @typescript-eslint/eslint-plugin@npm:^5.59.2":
+"@typescript-eslint/eslint-plugin@npm:^5.48.2, @typescript-eslint/eslint-plugin@npm:^5.61.0":
   version: 5.61.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.61.0"
   dependencies:
@@ -810,7 +810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.48.2, @typescript-eslint/parser@npm:^5.59.2":
+"@typescript-eslint/parser@npm:^5.48.2, @typescript-eslint/parser@npm:^5.61.0":
   version: 5.61.0
   resolution: "@typescript-eslint/parser@npm:5.61.0"
   dependencies:
@@ -2335,7 +2335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.32.0, eslint@npm:^8.39.0":
+"eslint@npm:^8.32.0, eslint@npm:^8.44.0":
   version: 8.44.0
   resolution: "eslint@npm:8.44.0"
   dependencies:
@@ -6063,7 +6063,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.0.0, typescript@npm:^5.0.3, typescript@npm:^5.0.4":
+"typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.0.0, typescript@npm:^5.0.3, typescript@npm:^5.1.6":
   version: 5.1.6
   resolution: "typescript@npm:5.1.6"
   bin:
@@ -6073,7 +6073,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.3#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.3#~builtin<compat/typescript>, typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
   resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
   bin:
