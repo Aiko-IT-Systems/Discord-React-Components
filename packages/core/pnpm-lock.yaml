@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sapphire/ts-config': ^4.0.0
   '@stencil/core': ^4.0.0
-  clsx: ^1.2.1
+  clsx: ^2.0.0
   hex-to-rgba: ^2.0.1
   highlight.js: ^11.6.0
   replace-in-file: ^7.0.0
@@ -11,7 +11,7 @@ specifiers:
 
 dependencies:
   '@stencil/core': 4.0.0
-  clsx: 1.2.1
+  clsx: 2.0.0
   hex-to-rgba: 2.0.1
   highlight.js: 11.6.0
 
@@ -75,8 +75,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-  /clsx/1.2.1:
-    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+  /clsx/2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
     dev: false
 
