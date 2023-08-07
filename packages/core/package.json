@@ -44,7 +44,7 @@
 	},
 	"dependencies": {
 		"@stencil/core": "^4.0.1",
-		"clsx": "^1.2.1",
+		"clsx": "^2.0.0",
 		"hex-to-rgba": "^2.0.1",
 		"highlight.js": "^11.8.0"
 	},
