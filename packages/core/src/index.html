@@ -1,14 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Discord Components Core</title>
 		<style>
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 400;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 400;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 500;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 500;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 600;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 600;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 700;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 700;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 800;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 800;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.ttf) format('truetype');
+			}
+
 			body {
 				color: #eee;
 				background-color: #2a2a2a;
-				font-family: Arial, Helvetica, sans-serif;
+				font-family:
+					'gg-sans',
+					system-ui,
+					-apple-system,
+					'Segoe UI',
+					Roboto,
+					'Helvetica Neue',
+					'Noto Sans',
+					'Liberation Sans',
+					Arial,
+					sans-serif,
+					'Apple Color Emoji',
+					'Segoe UI Emoji',
+					'Segoe UI Symbol',
+					'Noto Color Emoji';
 			}
 
 			a {
@@ -131,16 +279,82 @@
 						<discord-mention type="role" color="#70f0b4">Support</discord-mention>
 						if you need help.
 					</discord-message>
-					<discord-message profile="willard">Hello everyone! How's it going?</discord-message>
+					<discord-message profile="willard" timestamp="1691442603">Hello everyone! How's it going?</discord-message>
 					<discord-message author="Alyx Vargas">
 						Thank you
 						<discord-mention highlight>Maximillian Osborn</discord-mention>!
 					</discord-message>
+					<discord-message
+						author="Mira (411950662662881290)"
+						avatar="https://cdn.discordapp.com/avatars/411950662662881290/944253eae6a7116fef1ac59906ed14d6.png?size=1024"
+						timestamp="1691457914"
+						twenty-four="true"
+						bot="false"
+						verified="false"
+						webhook="false"
+						edited="false"
+					>
+						<a target="_blank" href="https://www.youtube.com/watch?v=aKRyZelOp7Y">https://www.youtube.com/watch?v=aKRyZelOp7Y</a>
+						<discord-embed
+							slot="embeds"
+							provider="YouTube"
+							provider-url="https://www.youtube.com/"
+							author-image=""
+							author-name="Linus Tech Tips"
+							author-url="https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"
+							embed-title="I designed my perfect gaming PC, then threw it away"
+							url="https://www.youtube.com/watch?v=aKRyZelOp7Y"
+							image=""
+							thumbnail=""
+							video="aKRyZelOp7Y"
+							color="#FF0000"
+						>
+						</discord-embed>
+					</discord-message>
 					<discord-message author="Kayla Feeney" avatar="/static/avafour.png">
 						I'm doing well, <discord-mention>Willard Walton</discord-mention>. What about yourself?
 					</discord-message>
+					<discord-message
+						author="Mira (411950662662881290)"
+						avatar="https://cdn.discordapp.com/avatars/411950662662881290/944253eae6a7116fef1ac59906ed14d6.png?size=1024"
+						timestamp="1691449345"
+						twenty-four="true"
+						bot="false"
+						verified="false"
+						webhook="false"
+						edited="false"
+					>
+						<discord-attachment
+							slot="attachments"
+							type="audio"
+							url="https://cdn.discordapp.com/attachments/1010253044866367528/1138245796882567168/meow3.ogg"
+							alt=""
+							height=""
+							width=""
+						/>
+					</discord-message>
+					<discord-message
+						author="Mira (411950662662881290)"
+						avatar="https://cdn.discordapp.com/avatars/411950662662881290/944253eae6a7116fef1ac59906ed14d6.png?size=1024"
+						timestamp="1691450294"
+						twenty-four="true"
+						bot="false"
+						verified="false"
+						webhook="false"
+						edited="false"
+					>
+						<discord-attachment
+							slot="attachments"
+							type="file"
+							url="https://cdn.discordapp.com/attachments/1010253044866367528/1138249777868447754/DisCatSharp1.dll"
+							alt="DisCatSharp1.dll"
+							height=""
+							width=""
+							size="25kb"
+						/>
+					</discord-message>
 					<discord-message profile="willard"> s!8ball How am I doing today? </discord-message>
-					<discord-message clyde="true">Nyaa~!</discord-message>
+					<discord-message clyde="true" twenty-four="true" timestamp="1691442603">Nyaa~!</discord-message>
 					<discord-message profile="skyra">
 						Yes.
 						<discord-attachments slot="attachments">
@@ -229,7 +443,7 @@ for(let a of b) {}'
 						sure to read through the <discord-mention type="channel">rules</discord-mention>. You can ping
 						<discord-mention type="role" color="#70f0b4">Support</discord-mention>
 						if you need help. Feel free to join
-						<discord-mention type="voice">General</discord-mention>
+						<discord-mention type="locked">General</discord-mention>
 						and talk with us and post thoughts in <discord-mention type="forum">feedback</discord-mention>.
 					</discord-message>
 					<discord-message author="Alyx Vargas">
@@ -283,7 +497,7 @@ for(let a of b) {}'
 							<discord-invite
 								name="DisCatSharp"
 								url="https://discord.gg/discatsharp"
-								icon="https://cdn.discordapp.com/icons/858089281214087179/c40cc6390001072cd06c0dfcf853e295.png"
+								icon="https://cdn.discordapp.com/icons/858089281214087179/f75c3c2ca26b0f881c469a37b8c7c803.png"
 								online="176"
 								members="738"
 							></discord-invite>
@@ -510,7 +724,7 @@ for(let a of b) {}'
 									</ul>
 								</discord-embed-field>
 							</discord-embed-fields>
-							<discord-embed-footer slot="footer" footer-image="/static/sapphire.png" timestamp="03/20/2021">
+							<discord-embed-footer slot="footer" footer-image="/static/sapphire.png" timestamp="1691449345">
 								Open source libraries to aid in the creation of Discord bots
 							</discord-embed-footer>
 						</discord-embed>
@@ -575,7 +789,7 @@ for(let a of b) {}'
 							author-url="https://www.youtube.com/channel/UCQn1FqrR2OCjSe6Nl4GlVHw"
 							color="#FF0000"
 							embed-title="Raon 라온 | ‘クネクネ (Wiggle Wiggle)’ M/V"
-							video="https://cdn.aitsys.dev/file/data/q2tzqoz7ua7sfyeulapq/PHID-FILE-3det2pn34p5chh4enez4/38-cJT320aw.mp4"
+							video="38-cJT320aw"
 							url="https://www.youtube.com/watch?v=38-cJT320aw"
 							image="https://cdn.aitsys.dev/file/data/kcrwt6baxsmr32rjnrdg/PHID-FILE-2w72lbyg6lrbstqo3geh/38-cJT320aw.jpg"
 						>

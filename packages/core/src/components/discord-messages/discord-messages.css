@@ -1,29 +1,135 @@
-@import url('https://fonts.bunny.net/css?family=roboto:400,500,700');
-
-/* New Whitney fonts to match rebrading */
 @font-face {
-	font-family: 'Whitney';
-	src: url('https://cdn.jsdelivr.net/gh/ItzDerock/discord-components@master/assets/fonts/Book.woff') format('woff');
+	font-family: 'gg-sans';
+	font-style: normal;
 	font-weight: 400;
-	font-display: swap;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff2);
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.ttf) format('truetype');
 }
+
 @font-face {
-	font-family: 'Whitney';
-	src: url('https://cdn.jsdelivr.net/gh/ItzDerock/discord-components@master/assets/fonts/Medium.woff') format('woff');
+	font-family: 'gg-sans';
+	font-style: italic;
+	font-weight: 400;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff2);
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'gg-sans';
+	font-style: normal;
 	font-weight: 500;
-	font-display: swap;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff2);
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.ttf) format('truetype');
 }
+
 @font-face {
-	font-family: 'Whitney';
-	src: url('https://cdn.jsdelivr.net/gh/ItzDerock/discord-components@master/assets/fonts/Semibold.woff') format('woff');
+	font-family: 'gg-sans';
+	font-style: italic;
+	font-weight: 500;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2);
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2) format('woff2');
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'gg-sans';
+	font-style: normal;
 	font-weight: 600;
-	font-display: swap;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff2);
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.ttf) format('truetype');
 }
+
 @font-face {
-	font-family: 'Whitney';
-	src: url('https://cdn.jsdelivr.net/gh/ItzDerock/discord-components@master/assets/fonts/Bold.woff') format('woff');
+	font-family: 'gg-sans';
+	font-style: italic;
+	font-weight: 600;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff2);
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'gg-sans';
+	font-style: normal;
 	font-weight: 700;
-	font-display: swap;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff2);
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'gg-sans';
+	font-style: italic;
+	font-weight: 700;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2);
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2) format('woff2');
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'gg-sans';
+	font-style: normal;
+	font-weight: 800;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2);
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2) format('woff2');
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'gg-sans';
+	font-style: italic;
+	font-weight: 800;
+	font-display: block;
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2);
+	src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2) format('woff2');
+	src:
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2) format('woff2'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.eot) format('embedded-opentype'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff) format('woff'),
+		url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.ttf) format('truetype');
 }
 
 .discord-messages {
@@ -31,8 +137,21 @@
 	background-color: #36393e;
 	display: block;
 	font-size: 16px;
-	font-family: Whitney, 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	font-family:
+		'gg-sans',
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		'Noto Sans',
+		'Liberation Sans',
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
 	line-height: 170%;
 	border: 1px solid rgba(255, 255, 255, 0.05);
 }

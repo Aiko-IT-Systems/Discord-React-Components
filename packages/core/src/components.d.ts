@@ -165,6 +165,16 @@ export namespace Components {
           * @example https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg
          */
         "video": string;
+        /**
+          * The height of the video.
+          * @default 225
+         */
+        "videoHeight"?: number;
+        /**
+          * The width of the video.
+          * @default 400
+         */
+        "videoWidth"?: number;
     }
     interface DiscordEmbedDescription {
     }
@@ -196,6 +206,10 @@ export namespace Components {
           * The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`.
          */
         "timestamp"?: DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour": boolean;
     }
     interface DiscordHeader {
         /**
@@ -338,6 +352,10 @@ export namespace Components {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified": boolean;
+        /**
+          * Whether the author is a webhook.
+         */
+        "webhook": boolean;
     }
     interface DiscordMessages {
         /**
@@ -931,6 +949,16 @@ declare namespace LocalJSX {
           * @example https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg
          */
         "video"?: string;
+        /**
+          * The height of the video.
+          * @default 225
+         */
+        "videoHeight"?: number;
+        /**
+          * The width of the video.
+          * @default 400
+         */
+        "videoWidth"?: number;
     }
     interface DiscordEmbedDescription {
     }
@@ -962,6 +990,10 @@ declare namespace LocalJSX {
           * The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`.
          */
         "timestamp"?: DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour"?: boolean;
     }
     interface DiscordHeader {
         /**
@@ -1104,6 +1136,10 @@ declare namespace LocalJSX {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified"?: boolean;
+        /**
+          * Whether the author is a webhook.
+         */
+        "webhook"?: boolean;
     }
     interface DiscordMessages {
         /**

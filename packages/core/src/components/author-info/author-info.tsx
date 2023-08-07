@@ -44,6 +44,10 @@ interface AuthorInfoProps {
 	 * Whether this author is clyde. Does not work with `bot`, `author`, `server` or `verified`.
 	 */
 	clyde: boolean;
+	/**
+	 * Whether this author is a webhool. Does not work with `bot`, `clyde`, `server` or `verified`.
+	 */
+	webhook: boolean;
 }
 
 export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
@@ -56,7 +60,8 @@ export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
 	roleName,
 	verified,
 	compact,
-	clyde
+	clyde,
+	webhook
 }) => (
 	<span class="discord-author-info">
 		{!compact && (
@@ -70,21 +75,22 @@ export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
 		{
 			<Fragment>
 				{/* If bot is true then we need to render a Bot tag */}
-				{clyde && (
+				{clyde && !webhook && !bot && !server && (
 					<span class="discord-application-tag discord-application-tag-clyde">
 						{/* If verified is true then a verified checkmark should be prefixed */}
 						{clyde && <ClydeAiTag />}
 						AI
 					</span>
 				)}
-				{bot && !server && !clyde && (
+				{bot && !webhook && !server && !clyde && (
 					<span class="discord-application-tag">
 						{/* If verified is true then a verified checkmark should be prefixed */}
 						{verified && <VerifiedTick />}
 						Bot
 					</span>
 				)}
-				{server && !bot && !clyde && <span class="discord-application-tag">Server</span>}
+				{webhook && !bot && !server && !clyde && <span class="discord-application-tag">Webhook</span>}
+				{server && !webhook && !bot && !clyde && <span class="discord-application-tag">Server</span>}
 				{op && <span class="discord-application-tag discord-application-tag-op">OP</span>}
 			</Fragment>
 		}

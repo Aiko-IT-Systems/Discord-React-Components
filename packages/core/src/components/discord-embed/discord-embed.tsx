@@ -77,6 +77,20 @@ export class DiscordEmbed implements ComponentInterface {
 	public video: string;
 
 	/**
+	 * The width of the video.
+	 * @default 400
+	 */
+	@Prop()
+	public videoWidth?: number = 400;
+
+	/**
+	 * The height of the video.
+	 * @default 225
+	 */
+	@Prop()
+	public videoHeight?: number = 225;
+
+	/**
 	 * The provider to show above the embed, for example for YouTube videos it will show "YouTube" at the top of the embed (above the author)
 	 * @example YouTube
 	 */
@@ -153,7 +167,9 @@ export class DiscordEmbed implements ComponentInterface {
 							{this.hasProvidedDescriptionSlot && <slot name="description"></slot>}
 
 							<slot name="fields"></slot>
-							{this.image || this.video ? (
+							{this.provider && this.provider === 'YouTube' ? (
+								<div class={clsx('discord-embed-media')}>{this.renderMedia()}</div>
+							) : this.image || this.video ? (
 								<div class={clsx('discord-embed-media', { 'discord-embed-media-video': Boolean(this.video) })}>
 									{this.renderMedia()}
 								</div>
@@ -169,9 +185,29 @@ export class DiscordEmbed implements ComponentInterface {
 	}
 
 	private renderMedia() {
-		if (this.video) {
+		if (this.provider && this.provider === 'YouTube') {
 			return (
-				<video controls muted preload="none" poster={this.image} src={this.video} height="225" width="400" class="discord-embed-video">
+				<iframe
+					height={this.videoHeight}
+					width={this.videoWidth}
+					src={`https://www.youtube.com/embed/${this.video}?autoplay=0&modestbranding=0&rel=0&showinfo=0&controls=1`}
+					frameBorder="0"
+					allowFullScreen
+					title={this.embedTitle}
+				></iframe>
+			);
+		} else if (this.video) {
+			return (
+				<video
+					controls
+					muted
+					preload="none"
+					poster={this.image}
+					src={this.video}
+					height={this.videoHeight}
+					width={this.videoWidth}
+					class="discord-embed-video"
+				>
 					<img src={this.image} alt="Discord embed media" class="discord-embed-image" />
 				</video>
 			);

@@ -21,6 +21,7 @@ export interface Profile {
 	roleIcon?: string;
 	roleName?: string;
 	clyde?: boolean;
+	webhook?: boolean;
 }
 
 export interface DiscordMessageOptions {

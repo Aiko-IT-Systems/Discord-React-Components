@@ -25,10 +25,16 @@ export class DiscordEmbedFooter implements ComponentInterface {
 	@Prop({ mutable: true, reflect: true })
 	public timestamp?: DiscordTimestamp;
 
+	/**
+	 * Whether to use 24-hour format for the timestamp.
+	 */
+	@Prop()
+	public twentyFour = false;
+
 	@Watch('timestamp')
 	public updateTimestamp(value?: DiscordTimestamp): string | null {
-		if (!value || isNaN(new Date(value).getTime())) return null;
-		return handleTimestamp(new Date(value));
+		if (!value) return null;
+		return handleTimestamp(value, this.twentyFour);
 	}
 
 	public componentWillRender() {

@@ -70,6 +70,12 @@ export class DiscordMessage implements ComponentInterface {
 	public clyde = false;
 
 	/**
+	 * Whether the author is a webhook.
+	 */
+	@Prop()
+	public webhook = false;
+
+	/**
 	 * Whether the message has been edited or not.
 	 */
 	@Prop()
@@ -144,7 +150,8 @@ export class DiscordMessage implements ComponentInterface {
 			roleColor: this.roleColor,
 			roleIcon: this.roleIcon,
 			roleName: this.roleName,
-			clyde: this.clyde
+			clyde: this.clyde,
+			webhook: this.webhook
 		};
 		const profileData: Profile = Reflect.get(profiles, this.profile) ?? {};
 		const profile: Profile = { ...defaultData, ...profileData, ...{ avatar: resolveAvatar(profileData.avatar ?? this.avatar) } };
@@ -197,10 +204,9 @@ export class DiscordMessage implements ComponentInterface {
 									roleName={profile.roleName ?? ''}
 									compact={parent.compactMode}
 									clyde={profile.clyde ?? false}
+									webhook={profile.webhook ?? false}
 								/>
-								<span class="discord-message-timestamp">
-									{this.timestamp?.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit' })}
-								</span>
+								<span class="discord-message-timestamp">{this.timestamp}</span>
 							</Fragment>
 						)}
 						<div class="discord-message-body">
@@ -216,6 +222,7 @@ export class DiscordMessage implements ComponentInterface {
 									roleName={profile.roleName ?? ''}
 									compact={parent.compactMode}
 									clyde={profile.clyde ?? false}
+									webhook={profile.webhook ?? false}
 								/>
 							)}
 							<span class="discord-message-markup">

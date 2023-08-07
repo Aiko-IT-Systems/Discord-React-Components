@@ -73,7 +73,7 @@ export class DiscordAttachment implements ComponentInterface {
 				return (
 					<Host class="discord-attachment">
 						<div class="discord-image-wrapper">
-							<video src={this.url} height={this.height} width={this.width} />
+							<video src={this.url} height={this.height} width={this.width} controls />
 						</div>
 					</Host>
 				);
@@ -81,14 +81,14 @@ export class DiscordAttachment implements ComponentInterface {
 			case DiscordAttachmentType.AUDIO:
 				return (
 					<Host class="discord-attachment">
-						<audio src={this.url} />
+						<audio src={this.url} controls />
 					</Host>
 				);
 
 			case DiscordAttachmentType.VOICE:
 				return (
 					<Host class="discord-attachment">
-						<audio src={this.url} />
+						<audio src={this.url} controls />
 					</Host>
 				);
 
