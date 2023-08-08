@@ -2,9 +2,21 @@
 	color: #b9bbbe;
 	display: flex;
 	font-size: 0.875rem;
-	font-family: Whitney, 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
+	font-family:
+		'gg-sans',
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		'Noto Sans',
+		'Liberation Sans',
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
 	padding-top: 2px;
 	margin-left: 56px;
 	margin-bottom: 4px;
@@ -12,6 +24,7 @@
 	line-height: 1.125rem;
 	position: relative;
 	white-space: pre;
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -55,6 +68,7 @@
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
+	-webkit-user-select: none;
 	user-select: none;
 	margin-right: 0.25rem;
 }
@@ -117,6 +131,7 @@
 	line-height: inherit;
 	white-space: pre;
 	text-overflow: ellipsis;
+	-webkit-user-select: none;
 	user-select: none;
 	cursor: pointer;
 	overflow-x: hidden;

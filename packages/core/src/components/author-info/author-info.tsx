@@ -1,6 +1,7 @@
 import { FunctionalComponent, h } from '@stencil/core';
 import Fragment from '../../Fragment';
 import VerifiedTick from '../svgs/verified-tick';
+import ClydeAiTag from '../svgs/clyde-ai';
 
 interface AuthorInfoProps {
 	/**
@@ -39,9 +40,29 @@ interface AuthorInfoProps {
 	 * Whether to reverse the order of the author info for compact mode.
 	 */
 	compact: boolean;
+	/**
+	 * Whether this author is clyde. Does not work with `bot`, `author`, `server` or `verified`.
+	 */
+	clyde: boolean;
+	/**
+	 * Whether this author is a webhool. Does not work with `bot`, `clyde`, `server` or `verified`.
+	 */
+	webhook: boolean;
 }
 
-export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({ author, bot, server, op, roleColor, roleIcon, roleName, verified, compact }) => (
+export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
+	author,
+	bot,
+	server,
+	op,
+	roleColor,
+	roleIcon,
+	roleName,
+	verified,
+	compact,
+	clyde,
+	webhook
+}) => (
 	<span class="discord-author-info">
 		{!compact && (
 			<Fragment>
@@ -54,14 +75,22 @@ export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({ author, bot, 
 		{
 			<Fragment>
 				{/* If bot is true then we need to render a Bot tag */}
-				{bot && !server && (
+				{clyde && !webhook && !bot && !server && (
+					<span class="discord-application-tag discord-application-tag-clyde">
+						{/* If verified is true then a verified checkmark should be prefixed */}
+						{clyde && <ClydeAiTag />}
+						AI
+					</span>
+				)}
+				{bot && !webhook && !server && !clyde && (
 					<span class="discord-application-tag">
 						{/* If verified is true then a verified checkmark should be prefixed */}
 						{verified && <VerifiedTick />}
 						Bot
 					</span>
 				)}
-				{server && !bot && <span class="discord-application-tag">Server</span>}
+				{webhook && !bot && !server && !clyde && <span class="discord-application-tag">Webhook</span>}
+				{server && !webhook && !bot && !clyde && <span class="discord-application-tag">Server</span>}
 				{op && <span class="discord-application-tag discord-application-tag-op">OP</span>}
 			</Fragment>
 		}

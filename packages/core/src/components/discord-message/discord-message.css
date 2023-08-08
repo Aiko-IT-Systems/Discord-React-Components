@@ -3,10 +3,22 @@
 	display: flex;
 	flex-direction: column;
 	font-size: 0.9em;
-	font-family: Whitney, 'Source Sans Pro', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	font-family:
+		'gg-sans',
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		'Noto Sans',
+		'Liberation Sans',
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
 	padding: 0px 1em;
-
 	position: relative;
 	word-wrap: break-word;
 	-webkit-user-select: text;
@@ -176,8 +188,21 @@
 .discord-message .discord-message-body code {
 	background: #2f3136;
 	white-space: break-spaces;
-	font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-		Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace;
+	font-family:
+		'gg-sans',
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		'Noto Sans',
+		'Liberation Sans',
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
 }
 
 .discord-light-theme .discord-message .discord-message-timestamp,
@@ -228,6 +253,7 @@
 	font-size: 1rem;
 	line-height: 1.375rem;
 	word-wrap: break-word;
+	-webkit-user-select: text;
 	user-select: text;
 	font-weight: 400;
 }

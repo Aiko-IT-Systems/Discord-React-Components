@@ -42,3 +42,5 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
+node_modules/
+.yarn/

@@ -5,8 +5,12 @@
 		"outDir": "dist",
 		"module": "CommonJS",
 		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"composite": true,
 		"importsNotUsedAsValues": "remove",
-		"declarationMap": true
+		"declarationMap": true,
+		"verbatimModuleSyntax": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true
 	},
 	"include": ["src"]
 }

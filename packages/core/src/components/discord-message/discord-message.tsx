@@ -64,6 +64,18 @@ export class DiscordMessage implements ComponentInterface {
 	public op = false;
 
 	/**
+	 * Whether the author is clyde.
+	 */
+	@Prop()
+	public clyde = false;
+
+	/**
+	 * Whether the author is a webhook.
+	 */
+	@Prop()
+	public webhook = false;
+
+	/**
 	 * Whether the message has been edited or not.
 	 */
 	@Prop()
@@ -137,7 +149,9 @@ export class DiscordMessage implements ComponentInterface {
 			op: this.op,
 			roleColor: this.roleColor,
 			roleIcon: this.roleIcon,
-			roleName: this.roleName
+			roleName: this.roleName,
+			clyde: this.clyde,
+			webhook: this.webhook
 		};
 		const profileData: Profile = Reflect.get(profiles, this.profile) ?? {};
 		const profile: Profile = { ...defaultData, ...profileData, ...{ avatar: resolveAvatar(profileData.avatar ?? this.avatar) } };
@@ -165,14 +179,22 @@ export class DiscordMessage implements ComponentInterface {
 				<slot name="reply"></slot>
 				<div class="discord-message-inner">
 					{parent.compactMode && <span class="discord-message-timestamp">{this.timestamp}</span>}
-					<div class="discord-author-avatar">
-						<img src={profile.avatar} alt={profile.author} />
-					</div>
+					{/* If clyde is true then we need to set clyde profile */}
+					{this.clyde && (
+						<div class="discord-author-avatar">
+							<img src={resolveAvatar('clyde')} alt="Clyde" />
+						</div>
+					)}
+					{!this.clyde && (
+						<div class="discord-author-avatar">
+							<img src={profile.avatar} alt={profile.author} />
+						</div>
+					)}
 					<div class="discord-message-content">
 						{!parent.compactMode && (
 							<Fragment>
 								<AuthorInfo
-									author={profile.author ?? ''}
+									author={profile.clyde ? 'Clyde' : profile.author ?? ''}
 									bot={profile.bot ?? false}
 									server={profile.server ?? false}
 									verified={profile.verified ?? false}
@@ -181,6 +203,8 @@ export class DiscordMessage implements ComponentInterface {
 									roleIcon={profile.roleIcon ?? ''}
 									roleName={profile.roleName ?? ''}
 									compact={parent.compactMode}
+									clyde={profile.clyde ?? false}
+									webhook={profile.webhook ?? false}
 								/>
 								<span class="discord-message-timestamp">{this.timestamp}</span>
 							</Fragment>
@@ -188,7 +212,7 @@ export class DiscordMessage implements ComponentInterface {
 						<div class="discord-message-body">
 							{parent.compactMode && (
 								<AuthorInfo
-									author={profile.author ?? ''}
+									author={profile.clyde ? 'Clyde' : profile.author ?? ''}
 									bot={profile.bot ?? false}
 									server={profile.server ?? false}
 									verified={profile.verified ?? false}
@@ -197,6 +221,8 @@ export class DiscordMessage implements ComponentInterface {
 									roleIcon={profile.roleIcon ?? ''}
 									roleName={profile.roleName ?? ''}
 									compact={parent.compactMode}
+									clyde={profile.clyde ?? false}
+									webhook={profile.webhook ?? false}
 								/>
 							)}
 							<span class="discord-message-markup">

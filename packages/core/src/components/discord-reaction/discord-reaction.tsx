@@ -71,6 +71,11 @@ export class DiscordReaction implements ComponentInterface {
 			if (this.count <= 0) {
 				this.count = 1;
 			}
+
+			if (this.count === 69) {
+				// eslint-disable-next-line no-alert
+				alert('nice');
+			}
 		}
 	}
 }

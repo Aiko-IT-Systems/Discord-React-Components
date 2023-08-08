@@ -3,9 +3,9 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import type { JSX } from '@derockdev/discord-components-core';
+import type { JSX } from '@aitsys/discord-components-core';
 
-import { defineCustomElements } from '@derockdev/discord-components-core/loader';
+import { defineCustomElements } from '@aitsys/discord-components-core/loader';
 
 defineCustomElements();
 export const DiscordActionRow = /*@__PURE__*/ createReactComponent<JSX.DiscordActionRow, HTMLDiscordActionRowElement>('discord-action-row');
@@ -34,6 +34,7 @@ export const DiscordQuote = /*@__PURE__*/ createReactComponent<JSX.DiscordQuote,
 export const DiscordReaction = /*@__PURE__*/ createReactComponent<JSX.DiscordReaction, HTMLDiscordReactionElement>('discord-reaction');
 export const DiscordReactions = /*@__PURE__*/ createReactComponent<JSX.DiscordReactions, HTMLDiscordReactionsElement>('discord-reactions');
 export const DiscordReply = /*@__PURE__*/ createReactComponent<JSX.DiscordReply, HTMLDiscordReplyElement>('discord-reply');
+export const DiscordSelect = /*@__PURE__*/ createReactComponent<JSX.DiscordSelect, HTMLDiscordSelectElement>('discord-select');
 export const DiscordSpoiler = /*@__PURE__*/ createReactComponent<JSX.DiscordSpoiler, HTMLDiscordSpoilerElement>('discord-spoiler');
 export const DiscordSystemMessage = /*@__PURE__*/ createReactComponent<JSX.DiscordSystemMessage, HTMLDiscordSystemMessageElement>(
 	'discord-system-message'

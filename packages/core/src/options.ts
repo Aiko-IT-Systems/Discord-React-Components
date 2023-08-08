@@ -1,10 +1,12 @@
 export interface Avatars {
-	default: 'blue' | 'gray' | 'green' | 'orange' | 'red';
+	default: 'blue' | 'gray' | 'green' | 'orange' | 'red' | 'pink' | 'clyde';
 	blue?: string;
 	gray?: string;
 	green?: string;
 	orange?: string;
 	red?: string;
+	pink?: string;
+	clyde?: string;
 	[key: string]: string | undefined;
 }
 
@@ -18,6 +20,8 @@ export interface Profile {
 	roleColor?: string;
 	roleIcon?: string;
 	roleName?: string;
+	clyde?: boolean;
+	webhook?: boolean;
 }
 
 export interface DiscordMessageOptions {
@@ -35,7 +39,8 @@ export const defaultDiscordAvatars: Omit<Avatars, 'default'> = {
 	green: 'https://cdn.discordapp.com/embed/avatars/2.png',
 	orange: 'https://cdn.discordapp.com/embed/avatars/3.png',
 	red: 'https://cdn.discordapp.com/embed/avatars/4.png',
-	pink: 'https://cdn.discordapp.com/embed/avatars/5.png'
+	pink: 'https://cdn.discordapp.com/embed/avatars/5.png',
+	clyde: 'https://i.imgur.com/CqOlANM.gif'
 };
 
 export interface Emoji {
@@ -52,7 +57,8 @@ export const avatars: Avatars = Object.assign(defaultDiscordAvatars, globalAvata
 
 export const profiles: { [key: string]: Profile } = window.$discordMessage?.profiles ?? {};
 
-export const defaultTheme: string = window.$discordMessage?.defaultTheme === 'light' ? 'light' : 'dark';
+export const defaultTheme: string =
+	window.$discordMessage?.defaultTheme === 'light' ? 'light' : window.$discordMessage?.defaultTheme === 'amoled' ? 'amoled' : 'dark';
 
 export const defaultMode: string = window.$discordMessage?.defaultMode === 'compact' ? 'compact' : 'cozy';
 

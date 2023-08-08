@@ -4,7 +4,8 @@ enum DiscordAttachmentType {
 	IMAGE = 'image',
 	VIDEO = 'video',
 	AUDIO = 'audio',
-	FILE = 'file'
+	FILE = 'file',
+	VOICE = 'voice'
 }
 
 @Component({
@@ -30,7 +31,7 @@ export class DiscordAttachment implements ComponentInterface {
 	 * 'image' | 'video' | 'audio' | 'file'
 	 */
 	@Prop()
-	public type: 'image' | 'video' | 'audio' | 'file';
+	public type: 'image' | 'video' | 'audio' | 'file' | 'voice';
 
 	/**
 	 * The size of the file.
@@ -72,7 +73,7 @@ export class DiscordAttachment implements ComponentInterface {
 				return (
 					<Host class="discord-attachment">
 						<div class="discord-image-wrapper">
-							<video src={this.url} height={this.height} width={this.width} />
+							<video src={this.url} height={this.height} width={this.width} controls />
 						</div>
 					</Host>
 				);
@@ -80,7 +81,14 @@ export class DiscordAttachment implements ComponentInterface {
 			case DiscordAttachmentType.AUDIO:
 				return (
 					<Host class="discord-attachment">
-						<audio src={this.url} />
+						<audio src={this.url} controls />
+					</Host>
+				);
+
+			case DiscordAttachmentType.VOICE:
+				return (
+					<Host class="discord-attachment">
+						<audio src={this.url} controls />
 					</Host>
 				);
 

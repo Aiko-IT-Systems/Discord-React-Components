@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { DiscordTimestamp } from "./util";
+export { DiscordTimestamp } from "./util";
 export namespace Components {
     interface DiscordActionRow {
     }
@@ -26,7 +27,7 @@ export namespace Components {
         /**
           * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file'
          */
-        "type": 'image' | 'video' | 'audio' | 'file';
+        "type": 'image' | 'video' | 'audio' | 'file' | 'voice';
         /**
           * The URL for the image attachment
           * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff)$/i`
@@ -145,6 +146,10 @@ export namespace Components {
          */
         "provider": string;
         /**
+          * The URL to open when you click on the embed provider.
+         */
+        "providerUrl": string;
+        /**
           * The thumbnail image to use.
          */
         "thumbnail": string;
@@ -160,6 +165,16 @@ export namespace Components {
           * @example https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg
          */
         "video": string;
+        /**
+          * The height of the video.
+          * @default 225
+         */
+        "videoHeight"?: number;
+        /**
+          * The width of the video.
+          * @default 400
+         */
+        "videoWidth"?: number;
     }
     interface DiscordEmbedDescription {
     }
@@ -191,6 +206,10 @@ export namespace Components {
           * The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`.
          */
         "timestamp"?: DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour": boolean;
     }
     interface DiscordHeader {
         /**
@@ -282,6 +301,10 @@ export namespace Components {
          */
         "bot": boolean;
         /**
+          * Whether the author is clyde.
+         */
+        "clyde": boolean;
+        /**
           * Whether the message has been edited or not.
          */
         "edited": boolean;
@@ -329,8 +352,16 @@ export namespace Components {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified": boolean;
+        /**
+          * Whether the author is a webhook.
+         */
+        "webhook": boolean;
     }
     interface DiscordMessages {
+        /**
+          * Whether to use amoled theme or not.
+         */
+        "amoledTheme": boolean;
         /**
           * Whether to use compact mode or not.
          */
@@ -425,6 +456,20 @@ export namespace Components {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified": boolean;
+    }
+    interface DiscordSelect {
+        /**
+          * Whether to show the button as disabled.
+         */
+        "disabled": boolean;
+        /**
+          * The emoji URL to use in the button.
+         */
+        "emoji": string;
+        /**
+          * The name of the emoji used in the button.
+         */
+        "emojiName": string;
     }
     interface DiscordSpoiler {
     }
@@ -663,6 +708,12 @@ declare global {
         prototype: HTMLDiscordReplyElement;
         new (): HTMLDiscordReplyElement;
     };
+    interface HTMLDiscordSelectElement extends Components.DiscordSelect, HTMLStencilElement {
+    }
+    var HTMLDiscordSelectElement: {
+        prototype: HTMLDiscordSelectElement;
+        new (): HTMLDiscordSelectElement;
+    };
     interface HTMLDiscordSpoilerElement extends Components.DiscordSpoiler, HTMLStencilElement {
     }
     var HTMLDiscordSpoilerElement: {
@@ -730,6 +781,7 @@ declare global {
         "discord-reaction": HTMLDiscordReactionElement;
         "discord-reactions": HTMLDiscordReactionsElement;
         "discord-reply": HTMLDiscordReplyElement;
+        "discord-select": HTMLDiscordSelectElement;
         "discord-spoiler": HTMLDiscordSpoilerElement;
         "discord-system-message": HTMLDiscordSystemMessageElement;
         "discord-tenor-video": HTMLDiscordTenorVideoElement;
@@ -759,7 +811,7 @@ declare namespace LocalJSX {
         /**
           * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file'
          */
-        "type"?: 'image' | 'video' | 'audio' | 'file';
+        "type"?: 'image' | 'video' | 'audio' | 'file' | 'voice';
         /**
           * The URL for the image attachment
           * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff)$/i`
@@ -878,6 +930,10 @@ declare namespace LocalJSX {
          */
         "provider"?: string;
         /**
+          * The URL to open when you click on the embed provider.
+         */
+        "providerUrl"?: string;
+        /**
           * The thumbnail image to use.
          */
         "thumbnail"?: string;
@@ -893,6 +949,16 @@ declare namespace LocalJSX {
           * @example https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg
          */
         "video"?: string;
+        /**
+          * The height of the video.
+          * @default 225
+         */
+        "videoHeight"?: number;
+        /**
+          * The width of the video.
+          * @default 400
+         */
+        "videoWidth"?: number;
     }
     interface DiscordEmbedDescription {
     }
@@ -924,6 +990,10 @@ declare namespace LocalJSX {
           * The timestamp to use for the message date. When supplying a string, the format must be `01/31/2000`.
          */
         "timestamp"?: DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour"?: boolean;
     }
     interface DiscordHeader {
         /**
@@ -1015,6 +1085,10 @@ declare namespace LocalJSX {
          */
         "bot"?: boolean;
         /**
+          * Whether the author is clyde.
+         */
+        "clyde"?: boolean;
+        /**
           * Whether the message has been edited or not.
          */
         "edited"?: boolean;
@@ -1062,8 +1136,16 @@ declare namespace LocalJSX {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified"?: boolean;
+        /**
+          * Whether the author is a webhook.
+         */
+        "webhook"?: boolean;
     }
     interface DiscordMessages {
+        /**
+          * Whether to use amoled theme or not.
+         */
+        "amoledTheme"?: boolean;
         /**
           * Whether to use compact mode or not.
          */
@@ -1158,6 +1240,20 @@ declare namespace LocalJSX {
           * Whether the bot is verified or not. Only works if `bot` is `true`
          */
         "verified"?: boolean;
+    }
+    interface DiscordSelect {
+        /**
+          * Whether to show the button as disabled.
+         */
+        "disabled"?: boolean;
+        /**
+          * The emoji URL to use in the button.
+         */
+        "emoji"?: string;
+        /**
+          * The name of the emoji used in the button.
+         */
+        "emojiName"?: string;
     }
     interface DiscordSpoiler {
     }
@@ -1275,6 +1371,7 @@ declare namespace LocalJSX {
         "discord-reaction": DiscordReaction;
         "discord-reactions": DiscordReactions;
         "discord-reply": DiscordReply;
+        "discord-select": DiscordSelect;
         "discord-spoiler": DiscordSpoiler;
         "discord-system-message": DiscordSystemMessage;
         "discord-tenor-video": DiscordTenorVideo;
@@ -1312,6 +1409,7 @@ declare module "@stencil/core" {
             "discord-reaction": LocalJSX.DiscordReaction & JSXBase.HTMLAttributes<HTMLDiscordReactionElement>;
             "discord-reactions": LocalJSX.DiscordReactions & JSXBase.HTMLAttributes<HTMLDiscordReactionsElement>;
             "discord-reply": LocalJSX.DiscordReply & JSXBase.HTMLAttributes<HTMLDiscordReplyElement>;
+            "discord-select": LocalJSX.DiscordSelect & JSXBase.HTMLAttributes<HTMLDiscordSelectElement>;
             "discord-spoiler": LocalJSX.DiscordSpoiler & JSXBase.HTMLAttributes<HTMLDiscordSpoilerElement>;
             "discord-system-message": LocalJSX.DiscordSystemMessage & JSXBase.HTMLAttributes<HTMLDiscordSystemMessageElement>;
             "discord-tenor-video": LocalJSX.DiscordTenorVideo & JSXBase.HTMLAttributes<HTMLDiscordTenorVideoElement>;

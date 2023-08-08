@@ -4,10 +4,11 @@
 		"lib": ["ESNext", "DOM"],
 		"module": "ESNext",
 		"moduleResolution": "Node",
-		"target": "ES2017",
+		"target": "ES2022",
 		"jsx": "react",
 		"strictPropertyInitialization": false,
 		"useDefineForClassFields": false,
-		"declarationMap": false
+		"declarationMap": false,
+		"forceConsistentCasingInFileNames": true
 	}
 }

@@ -1,14 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Discord Components Core</title>
 		<style>
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 400;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal400.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 400;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic400.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 500;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal500.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 500;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic500.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 600;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal600.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 600;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic600.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 700;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff2);
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal700.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 700;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic700.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: normal;
+				font-weight: 800;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_normal800.ttf) format('truetype');
+			}
+
+			@font-face {
+				font-family: 'gg-sans';
+				font-style: italic;
+				font-weight: 800;
+				font-display: block;
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2);
+				src: url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2) format('woff2');
+				src:
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff2) format('woff2'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.eot) format('embedded-opentype'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.woff) format('woff'),
+					url(https://docs.dcs.aitsys.dev/fonts/gg_sans_italic800.ttf) format('truetype');
+			}
+
 			body {
 				color: #eee;
 				background-color: #2a2a2a;
-				font-family: Arial, Helvetica, sans-serif;
+				font-family:
+					'gg-sans',
+					system-ui,
+					-apple-system,
+					'Segoe UI',
+					Roboto,
+					'Helvetica Neue',
+					'Noto Sans',
+					'Liberation Sans',
+					Arial,
+					sans-serif,
+					'Apple Color Emoji',
+					'Segoe UI Emoji',
+					'Segoe UI Symbol',
+					'Noto Color Emoji';
 			}
 
 			a {
@@ -51,9 +199,9 @@
 						bot: true,
 						verified: true
 					},
-					favna: {
-						author: 'Favna',
-						avatar: 'https://github.com/favna.png',
+					lulalaby: {
+						author: 'lulalaby',
+						avatar: 'https://github.com/lulalaby.png',
 						roleColor: '#a155ab',
 						roleIcon: '/static/booster.png',
 						roleName: 'Booster'
@@ -85,14 +233,18 @@
 				}
 			};
 		</script>
-		<script type="module" src="/build/derockdev-discord-components-core.esm.js"></script>
-		<script nomodule src="/build/derockdev-discord-components-core.js"></script>
+		<script type="module" src="/build/aitsys-discord-components-core.esm.js"></script>
+		<script nomodule src="/build/aitsys-discord-components-core.js"></script>
 	</head>
+
 	<body>
 		<div>
 			<div>
-				<h1 class="logo">@skyra/discord-components-core</h1>
-				<span>[<a target="_blank" rel="noopener noreferrer" href="https://github.com/skyra-project/discord-components/">Github</a>]</span>
+				<h1 class="logo">@aitsys/discord-components-core</h1>
+				<span
+					>[<a target="_blank" rel="noopener noreferrer" href="https://github.com/Aiko-IT-Systems/Discord-React-Components/">Github</a
+					>]</span
+				>
 			</div>
 			<main>
 				<h3 class="title">A normal conversation</h3>
@@ -127,15 +279,82 @@
 						<discord-mention type="role" color="#70f0b4">Support</discord-mention>
 						if you need help.
 					</discord-message>
-					<discord-message profile="willard">Hello everyone! How's it going?</discord-message>
+					<discord-message profile="willard" timestamp="1691442603">Hello everyone! How's it going?</discord-message>
 					<discord-message author="Alyx Vargas">
 						Thank you
 						<discord-mention highlight>Maximillian Osborn</discord-mention>!
 					</discord-message>
+					<discord-message
+						author="Mira (411950662662881290)"
+						avatar="https://cdn.discordapp.com/avatars/411950662662881290/944253eae6a7116fef1ac59906ed14d6.png?size=1024"
+						timestamp="1691457914"
+						twenty-four="true"
+						bot="false"
+						verified="false"
+						webhook="false"
+						edited="false"
+					>
+						<a target="_blank" href="https://www.youtube.com/watch?v=aKRyZelOp7Y">https://www.youtube.com/watch?v=aKRyZelOp7Y</a>
+						<discord-embed
+							slot="embeds"
+							provider="YouTube"
+							provider-url="https://www.youtube.com/"
+							author-image=""
+							author-name="Linus Tech Tips"
+							author-url="https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw"
+							embed-title="I designed my perfect gaming PC, then threw it away"
+							url="https://www.youtube.com/watch?v=aKRyZelOp7Y"
+							image=""
+							thumbnail=""
+							video="aKRyZelOp7Y"
+							color="#FF0000"
+						>
+						</discord-embed>
+					</discord-message>
 					<discord-message author="Kayla Feeney" avatar="/static/avafour.png">
 						I'm doing well, <discord-mention>Willard Walton</discord-mention>. What about yourself?
 					</discord-message>
+					<discord-message
+						author="Mira (411950662662881290)"
+						avatar="https://cdn.discordapp.com/avatars/411950662662881290/944253eae6a7116fef1ac59906ed14d6.png?size=1024"
+						timestamp="1691449345"
+						twenty-four="true"
+						bot="false"
+						verified="false"
+						webhook="false"
+						edited="false"
+					>
+						<discord-attachment
+							slot="attachments"
+							type="audio"
+							url="https://cdn.discordapp.com/attachments/1010253044866367528/1138245796882567168/meow3.ogg"
+							alt=""
+							height=""
+							width=""
+						/>
+					</discord-message>
+					<discord-message
+						author="Mira (411950662662881290)"
+						avatar="https://cdn.discordapp.com/avatars/411950662662881290/944253eae6a7116fef1ac59906ed14d6.png?size=1024"
+						timestamp="1691450294"
+						twenty-four="true"
+						bot="false"
+						verified="false"
+						webhook="false"
+						edited="false"
+					>
+						<discord-attachment
+							slot="attachments"
+							type="file"
+							url="https://cdn.discordapp.com/attachments/1010253044866367528/1138249777868447754/DisCatSharp1.dll"
+							alt="DisCatSharp1.dll"
+							height=""
+							width=""
+							size="25kb"
+						/>
+					</discord-message>
 					<discord-message profile="willard"> s!8ball How am I doing today? </discord-message>
+					<discord-message clyde="true" twenty-four="true" timestamp="1691442603">Nyaa~!</discord-message>
 					<discord-message profile="skyra">
 						Yes.
 						<discord-attachments slot="attachments">
@@ -144,31 +363,37 @@
 					</discord-message>
 					<discord-message profile="skyra">
 						asdf
-						<discord-attachment
-							type="image"
-							size="59.81 KB"
-							slot="attachment"
-							url="https://derock.media/r/Ihbu2w.png"
-							alt="Ihbu2w.png"
-							width="1920"
-							height="1080"
-						></discord-attachment>
-
 						<discord-code-block
-							code="const test = 'asdf'; console.log(test);
-for(let a of b) {}"
+							code='const test = "asdf"; console.log(test);
+for(let a of b) {}'
 							language="javascript"
 						></discord-code-block>
 
 						<discord-time timestamp="1664412460102" format="R"></discord-time>
 
 						<discord-attachments slot="attachments">
-							<discord-attachment type="file" alt="test file" url="/static/testfile.png" />
+							<discord-attachment type="file" slot="attachment" alt="test file" url="/static/testfile.png" />
+						</discord-attachments>
+						<discord-attachments>
+							<discord-attachment
+								type="image"
+								size="59.81 KB"
+								slot="attachment"
+								url="https://derock.media/r/Ihbu2w.png"
+								alt="Ihbu2w.png"
+								width="1920"
+								height="1080"
+							></discord-attachment>
 						</discord-attachments>
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">Light mode</h3>
 				<discord-messages light-theme>
+					<discord-message>Look at me I'm a beautiful butterfly</discord-message>
+					<discord-message edited>Fluttering in the sunlight 🌞</discord-message>
+				</discord-messages>
+				<h3 class="title">Amoled mode</h3>
+				<discord-messages amoled-theme>
 					<discord-message>Look at me I'm a beautiful butterfly</discord-message>
 					<discord-message edited>Fluttering in the sunlight 🌞</discord-message>
 				</discord-messages>
@@ -218,7 +443,7 @@ for(let a of b) {}"
 						sure to read through the <discord-mention type="channel">rules</discord-mention>. You can ping
 						<discord-mention type="role" color="#70f0b4">Support</discord-mention>
 						if you need help. Feel free to join
-						<discord-mention type="voice">General</discord-mention>
+						<discord-mention type="locked">General</discord-mention>
 						and talk with us and post thoughts in <discord-mention type="forum">feedback</discord-mention>.
 					</discord-message>
 					<discord-message author="Alyx Vargas">
@@ -231,7 +456,7 @@ for(let a of b) {}"
 				</discord-messages>
 				<h3 class="title">Custom Discord Emojis</h3>
 				<discord-messages>
-					<discord-message profile="favna">
+					<discord-message profile="lulalaby">
 						Hey these are some custom emojis:
 						<discord-custom-emoji name="blobparty" url="/static/blobparty.gif"></discord-custom-emoji>
 						<discord-custom-emoji name="skyra" url="/static/skyra.png"></discord-custom-emoji>
@@ -247,32 +472,32 @@ for(let a of b) {}"
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">Server Invites</h3>
-				<discord-messages>
-					<discord-message profile="favna">
-						discord.gg/djs <br />
-						discord.gg/code <br />
-						discord.gg/6gakFR2
+				<discord-messages amoled-theme>
+					<discord-message profile="lulalaby">
+						discord.gg/discord-developers <br />
+						discord.gg/pycord <br />
+						discord.gg/discatsharp
 						<discord-attachments slot="attachments">
 							<discord-invite
-								name="discord.js - Imagine a bot"
-								icon="/static/discordjs.png"
-								url="https://discord.gg/djs"
+								name="Discord Developers"
+								icon="https://cdn.discordapp.com/icons/613425648685547541/a_8cbab95c780105caf20deb643a21d113.png"
+								url="https://discord.gg/discord-developers"
 								online="16417"
 								members="87147"
 								verified="true"
 							></discord-invite>
 							<discord-invite
-								name="The Coding Den"
-								icon="/static/tcd.png"
-								url="https://discord.gg/code"
+								name="Pycord"
+								icon="https://cdn.discordapp.com/icons/881207955029110855/a_5adae3a25201394868a5b9614577c4e4.gif"
+								url="https://discord.gg/pycord"
 								online="18456"
 								members="73548"
 								partnered="true"
 							></discord-invite>
 							<discord-invite
-								name="Skyra Lounge"
-								url="https://join.skyra.pw"
-								icon="/static/skyralounge.gif"
+								name="DisCatSharp"
+								url="https://discord.gg/discatsharp"
+								icon="https://cdn.discordapp.com/icons/858089281214087179/f75c3c2ca26b0f881c469a37b8c7c803.png"
 								online="176"
 								members="738"
 							></discord-invite>
@@ -281,16 +506,25 @@ for(let a of b) {}"
 				</discord-messages>
 				<h3 class="title">Image Attachments with small images</h3>
 				<discord-messages>
-					<discord-message profile="Alyx Vargas">
+					<discord-message profile="lulalaby">
 						That's a very small logo image!
-						<discord-attachment slot="attachments" url="/static/stencil.png" height="100" width="100" alt="stencil-logo" />
+						<discord-attachments>
+							<discord-attachment
+								slot="attachment"
+								url="/static/stencil.png"
+								height="100"
+								width="100"
+								alt="stencil-logo"
+								type="image"
+							/>
+						</discord-attachments>
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">Image Attachments with large images</h3>
 				<discord-messages>
-					<discord-message profile="favna">
+					<discord-message profile="lulalaby">
 						Hey guys, check out this awesome, cute, and totally amazing dragon!
-						<discord-attachment slot="attachments" url="/static/dragonite.png" height="512" width="512" alt="dragonite" />
+						<discord-attachment slot="attachments" url="/static/dragonite.png" height="512" width="512" alt="dragonite" type="image" />
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">System Messages</h3>
@@ -305,37 +539,37 @@ for(let a of b) {}"
 						<i>Snazzah</i> has added <i>Discord Developers #discord-api-announcements</i> to this channel. Its most important updates will
 						show up here.
 					</discord-system-message>
-					<discord-system-message type="boost"> <i style="color: #a155ab">Favna</i> just boosted the server! </discord-system-message>
+					<discord-system-message type="boost"> <i style="color: #a155ab">lulalaby</i> just boosted the server! </discord-system-message>
 					<discord-system-message type="thread">
-						<i style="color: #a155ab">Favna</i> started a thread: <i>Skyra Suggestion Thread</i>. See all <i>threads</i>.
+						<i style="color: #a155ab">lulalaby</i> started a thread: <i>Skyra Suggestion Thread</i>. See all <i>threads</i>.
 					</discord-system-message>
 				</discord-messages>
 				<discord-messages>
-					<discord-system-message type="join"> <i>Snazzah</i> added <i>Favna</i> to the group. </discord-system-message>
-					<discord-system-message type="call"> <i>Favna</i> started a call that lasted an hour. </discord-system-message>
+					<discord-system-message type="join"> <i>Snazzah</i> added <i>lulalaby</i> to the group. </discord-system-message>
+					<discord-system-message type="call"> <i>lulalaby</i> started a call that lasted an hour. </discord-system-message>
 					<discord-system-message type="edit"> <i>Snazzah</i> changed the channel icon. </discord-system-message>
 					<discord-system-message type="edit" channel-name>
 						<i>Snazzah</i> changed the channel name: <b>A humble Group DM</b>
 					</discord-system-message>
-					<discord-system-message type="missed-call"> You missed a call from <i>Favna</i> that lasted a minute. </discord-system-message>
-					<discord-system-message type="leave"> <i>Favna</i> left the group. </discord-system-message>
+					<discord-system-message type="missed-call"> You missed a call from <i>lulalaby</i> that lasted a minute. </discord-system-message>
+					<discord-system-message type="leave"> <i>lulalaby</i> left the group. </discord-system-message>
 				</discord-messages>
 				<h3 class="title">Threads</h3>
 				<discord-messages>
 					<discord-system-message type="thread">
-						<i style="color: #a155ab">Favna</i> started a thread: <i>Skyra Suggestion Thread</i>. See all <i>threads</i>.
+						<i style="color: #a155ab">lulalaby</i> started a thread: <i>Skyra Suggestion Thread</i>. See all <i>threads</i>.
 						<discord-thread slot="thread" cta="2 Messages">
 							<discord-thread-message profile="skyra">Pong!</discord-thread-message>
 						</discord-thread>
 					</discord-system-message>
-					<discord-message profile="favna">
+					<discord-message profile="lulalaby">
 						Let's make a thread!
 						<discord-thread slot="thread" name="A cool thread!">There are no messages in this thread yet.</discord-thread>
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">Reactions</h3>
 				<discord-messages>
-					<discord-message profile="favna">
+					<discord-message profile="lulalaby">
 						React to this message!
 						<discord-reactions slot="reactions">
 							<discord-reaction name="👍" emoji="/static/thumbsup.svg" count="1"></discord-reaction>
@@ -346,30 +580,30 @@ for(let a of b) {}"
 				</discord-messages>
 				<h3 class="title">Replies</h3>
 				<discord-messages>
-					<discord-message profile="favna">
+					<discord-message profile="lulalaby">
 						<discord-reply slot="reply" profile="skyra" edited attachment>What do you think about this image?</discord-reply>
 						Looks nice!
 					</discord-message>
 					<discord-message profile="maximillian" highlight>
-						<discord-reply slot="reply" profile="favna" mentions>Looks nice!</discord-reply>
+						<discord-reply slot="reply" profile="lulalaby" mentions>Looks nice!</discord-reply>
 						I agree!
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">Replies in Compact Mode</h3>
 				<discord-messages compact-mode>
-					<discord-message profile="favna">
+					<discord-message profile="lulalaby">
 						<discord-reply slot="reply" profile="skyra" edited attachment>What do you think about this image?</discord-reply>
 						Looks nice!
 					</discord-message>
 					<discord-message profile="maximillian" highlight>
-						<discord-reply slot="reply" profile="favna" mentions>Looks nice!</discord-reply>
+						<discord-reply slot="reply" profile="lulalaby" mentions>Looks nice!</discord-reply>
 						I agree!
 					</discord-message>
 				</discord-messages>
 				<h3 class="title">Commands</h3>
 				<discord-messages>
 					<discord-message profile="skyra">
-						<discord-command slot="reply" profile="favna" command="/ping"></discord-command>
+						<discord-command slot="reply" profile="lulalaby" command="/ping"></discord-command>
 						Pong!
 					</discord-message>
 					<discord-message profile="skyra" ephemeral>
@@ -380,7 +614,7 @@ for(let a of b) {}"
 				<h3 class="title">Commands in Compact Mode</h3>
 				<discord-messages compact-mode>
 					<discord-message profile="skyra">
-						<discord-command slot="reply" profile="favna" command="/ping"></discord-command>
+						<discord-command slot="reply" profile="lulalaby" command="/ping"></discord-command>
 						Pong!
 					</discord-message>
 					<discord-message profile="skyra" ephemeral>
@@ -410,9 +644,26 @@ for(let a of b) {}"
 						</discord-attachments>
 					</discord-message>
 				</discord-messages>
+				<h3 class="title">Selects</h3>
+				<discord-messages>
+					<discord-message profile="skyra">
+						Here is a select!
+						<discord-attachments slot="components">
+							<discord-action-row>
+								<discord-select>a</discord-select>
+							</discord-action-row>
+						</discord-attachments>
+					</discord-message>
+				</discord-messages>
 				<h3 class="title">Verified Discord bots</h3>
 				<discord-messages>
 					<discord-message profile="skyra"> Wow I just got verified! </discord-message>
+				</discord-messages>
+				<h3 class="title">Clyde</h3>
+				<discord-messages>
+					<discord-message clyde="true"
+						>I am your friendly neighborhood chatbot! Here to help with any questions or chat. 😄</discord-message
+					>
 				</discord-messages>
 				<h3 class="title">Full embed example</h3>
 				<discord-messages>
@@ -473,7 +724,7 @@ for(let a of b) {}"
 									</ul>
 								</discord-embed-field>
 							</discord-embed-fields>
-							<discord-embed-footer slot="footer" footer-image="/static/sapphire.png" timestamp="03/20/2021">
+							<discord-embed-footer slot="footer" footer-image="/static/sapphire.png" timestamp="1691449345">
 								Open source libraries to aid in the creation of Discord bots
 							</discord-embed-footer>
 						</discord-embed>
@@ -492,7 +743,7 @@ for(let a of b) {}"
 										&lt;pre&gt;content&lt;/pre&gt; for
 										<pre>content</pre>
 									</li>
-									<li>&lt;img class="emoji" /&gt; for <img class="emoji" src="/static/sapphire.png" /></li>
+									<li>&lt;img class="emoji" /&gt; for <img alt="emoji" class="emoji" src="/static/sapphire.png" /></li>
 									<li>
 										&lt;blockquote&gt;content&lt;/blockquote&gt; for
 										<blockquote>content</blockquote>
@@ -512,7 +763,7 @@ for(let a of b) {}"
 						<br />
 						<br />
 						We have a redesigned website over at
-						<a target="_blank" href="https://discord.js.org/">https://discord.js.org/</a>
+						<a target="_blank" rel="noopener" href="https://discord.js.org/">https://discord.js.org/</a>
 						<br />
 						Check it out if you want or not
 						<br />
@@ -532,13 +783,15 @@ for(let a of b) {}"
 					<discord-message profile="skyra">
 						<discord-embed
 							slot="embeds"
-							provider="Blender"
-							author-name="Blender"
-							author-url="https://peach.blender.org/download/"
-							color="#019DD8"
-							embed-title="Big Buck Bunny"
-							video="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg"
-							url="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg"
+							provider="YouTube"
+							author-name="Raon"
+							provider-url="https://www.youtube.com"
+							author-url="https://www.youtube.com/channel/UCQn1FqrR2OCjSe6Nl4GlVHw"
+							color="#FF0000"
+							embed-title="Raon 라온 | ‘クネクネ (Wiggle Wiggle)’ M/V"
+							video="38-cJT320aw"
+							url="https://www.youtube.com/watch?v=38-cJT320aw"
+							image="https://cdn.aitsys.dev/file/data/kcrwt6baxsmr32rjnrdg/PHID-FILE-2w72lbyg6lrbstqo3geh/38-cJT320aw.jpg"
 						>
 						</discord-embed>
 					</discord-message>

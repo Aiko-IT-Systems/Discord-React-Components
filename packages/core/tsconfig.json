@@ -4,7 +4,9 @@
 		"rootDir": "src",
 		"outDir": "dist",
 		"jsxFactory": "h",
-		"experimentalDecorators": true
+		"experimentalDecorators": true,
+		"verbatimModuleSyntax": false,
+		"forceConsistentCasingInFileNames": true
 	},
 	"include": ["src"]
 }

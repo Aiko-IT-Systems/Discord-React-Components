@@ -1,8 +1,8 @@
 {
-	"name": "@derockdev/discord-components-react",
-	"version": "3.5.2",
-	"description": "React bindings for @derockdev/discord-components-core",
-	"author": "@derockdev",
+	"name": "@aitsys/discord-components-react",
+	"version": "1.1.7",
+	"description": "React bindings for @aitsys/discord-components-core",
+	"author": "Lala Sabathil <aiko@aitsys.dev>",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -15,18 +15,18 @@
 		"./dist/index.mjs",
 		"./dist/index.js"
 	],
-	"homepage": "https://github.com/itzderock/discord-components/tree/main/packages/react#readme",
+	"homepage": "https://github.com/Aiko-IT-Systems/Discord-React-Components/tree/main/packages/react#readme",
 	"scripts": {
 		"clean": "node scripts/clean.mjs",
 		"build": "pnpm clean && tsc && gen-esm-wrapper dist/index.js dist/index.mjs && replace-in-file --configFile=scripts/replaceDefaultMod.cjs"
 	},
 	"dependencies": {
-		"@derockdev/discord-components-core": "^3.5.1",
-		"tslib": "^2.4.0"
+		"@aitsys/discord-components-core": "^1.0.0",
+		"tslib": "^2.6.0"
 	},
 	"peerDependencies": {
-		"react": "16.8.x || 17.x || 18.x",
-		"react-dom": "16.8.x || 17.x || 18.x"
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"directories": {
 		"lib": "src"
@@ -43,13 +43,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/skyra-project/discord-components.git"
+		"url": "git+https://github.com/Aiko-IT-Systems/Discord-React-Components.git"
 	},
 	"bugs": {
-		"url": "https://github.com/skyra-project/discord-components/issues"
+		"url": "https://github.com/Aiko-IT-Systems/Discord-React-Components/issues"
 	},
 	"keywords": [
-		"skyra",
+		"aitsys",
 		"typescript",
 		"ts",
 		"yarn",
@@ -62,6 +62,6 @@
 	],
 	"devDependencies": {
 		"gen-esm-wrapper": "^1.1.3",
-		"replace-in-file": "^7.0.0"
+		"replace-in-file": "^7.0.1"
 	}
 }
