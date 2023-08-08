@@ -1,6 +1,7 @@
 import { Component, ComponentInterface, Element, h, Host, Prop, Watch } from '@stencil/core';
 import Fragment from '../../Fragment';
 import { DiscordTimestamp, handleTimestamp } from '../../util';
+import { useTwentyFourHourMode } from '../../options';
 
 @Component({
 	tag: 'discord-embed-footer',
@@ -29,7 +30,7 @@ export class DiscordEmbedFooter implements ComponentInterface {
 	 * Whether to use 24-hour format for the timestamp.
 	 */
 	@Prop()
-	public twentyFour = false;
+	public twentyFour = useTwentyFourHourMode;
 
 	@Watch('timestamp')
 	public updateTimestamp(value?: DiscordTimestamp): string | null {

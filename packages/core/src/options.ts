@@ -31,6 +31,7 @@ export interface DiscordMessageOptions {
 	defaultTheme?: string;
 	defaultMode?: string;
 	defaultBackground?: 'discord' | 'none';
+	useTwentyFourHourMode?: boolean;
 }
 
 export const defaultDiscordAvatars: Omit<Avatars, 'default'> = {
@@ -63,6 +64,8 @@ export const defaultTheme: string =
 export const defaultMode: string = window.$discordMessage?.defaultMode === 'compact' ? 'compact' : 'cozy';
 
 export const defaultBackground: string = window.$discordMessage?.defaultBackground === 'none' ? 'none' : 'discord';
+
+export const useTwentyFourHourMode: boolean = window.$discordMessage?.useTwentyFourHourMode ?? true;
 
 declare global {
 	interface Window {

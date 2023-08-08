@@ -483,6 +483,10 @@ export namespace Components {
          */
         "timestamp": DiscordTimestamp;
         /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour": boolean;
+        /**
           * The type of system message this is, this will change the icon shown. Valid values: `join`, `leave`, `call`, `missed-call`, `boost`, `edit`, `thread`, `pin`, `alert`, and `error`.
          */
         "type": 'join' | 'leave' | 'call' | 'missed-call' | 'boost' | 'edit' | 'thread' | 'pin' | 'alert' | 'error';
@@ -1266,6 +1270,10 @@ declare namespace LocalJSX {
           * The timestamp to use for the message date.
          */
         "timestamp"?: DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour"?: boolean;
         /**
           * The type of system message this is, this will change the icon shown. Valid values: `join`, `leave`, `call`, `missed-call`, `boost`, `edit`, `thread`, `pin`, `alert`, and `error`.
          */

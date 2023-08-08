@@ -162,6 +162,16 @@ declare global {
 }
 ```
 
+### Use twelve hour time
+
+By default, the component uses 24 hour time. If you want to use 12 hour time, you can set the `useTwentyFourHourMode` property to `false` in the `window.$discordMessage` object.
+
+```ts
+window.$discordMessage = {
+	useTwentyFourHourMode: false
+};
+```
+
 ### Avatar shortcuts
 
 The current avatar shortcut strings available are "blue" (default), "gray", "green", "orange", and "red". These shortcuts map to the following image links:

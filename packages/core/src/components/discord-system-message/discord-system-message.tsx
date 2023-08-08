@@ -11,6 +11,7 @@ import SystemError from '../svgs/system-error';
 import Thread from '../svgs/thread';
 import UserJoin from '../svgs/user-join';
 import UserLeave from '../svgs/user-leave';
+import { useTwentyFourHourMode } from '../../options';
 
 @Component({
 	tag: 'discord-system-message',
@@ -28,6 +29,12 @@ export class DiscordSystemMessage implements ComponentInterface {
 	 */
 	@Prop({ mutable: true, reflect: true })
 	public timestamp: DiscordTimestamp = new Date();
+
+	/**
+	 * Whether to use 24-hour format for the timestamp.
+	 */
+	@Prop()
+	public twentyFour = useTwentyFourHourMode;
 
 	/**
 	 * The type of system message this is, this will change the icon shown.
@@ -55,11 +62,12 @@ export class DiscordSystemMessage implements ComponentInterface {
 
 	@Watch('timestamp')
 	public updateTimestamp(value: DiscordTimestamp): string | null {
-		return handleTimestamp(value);
+		if (!value) return null;
+		return handleTimestamp(value, this.twentyFour);
 	}
 
 	public componentWillRender() {
-		this.timestamp = handleTimestamp(this.timestamp);
+		this.timestamp = this.updateTimestamp(this.timestamp);
 	}
 
 	public render() {

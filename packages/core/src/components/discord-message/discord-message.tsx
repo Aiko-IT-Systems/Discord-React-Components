@@ -1,7 +1,7 @@
 import { Component, ComponentInterface, Element, h, Host, Prop, Watch } from '@stencil/core';
 import clsx from 'clsx';
 import Fragment from '../../Fragment';
-import { avatars, Profile, profiles } from '../../options';
+import { avatars, Profile, profiles, useTwentyFourHourMode } from '../../options';
 import { DiscordTimestamp, handleTimestamp } from '../../util';
 import { AuthorInfo } from '../author-info/author-info';
 import Ephemeral from '../svgs/ephemeral';
@@ -121,15 +121,16 @@ export class DiscordMessage implements ComponentInterface {
 	 * Whether to use 24-hour format for the timestamp.
 	 */
 	@Prop()
-	public twentyFour = false;
+	public twentyFour = useTwentyFourHourMode;
 
 	@Watch('timestamp')
 	public updateTimestamp(value: DiscordTimestamp): string | null {
+		if (!value) return null;
 		return handleTimestamp(value, this.twentyFour);
 	}
 
 	public componentWillRender() {
-		this.timestamp = handleTimestamp(this.timestamp, this.twentyFour);
+		this.timestamp = this.updateTimestamp(this.timestamp);
 	}
 
 	public render() {
