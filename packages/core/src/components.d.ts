@@ -71,9 +71,9 @@ export namespace Components {
     }
     interface DiscordCodeBlock {
         /**
-          * The code to display.
+          * The code to display. If not supplied, add the code as <pre></pre> tags inside the component.
          */
-        "code": string;
+        "code"?: string;
         /**
           * The language of the code block.
          */
@@ -864,7 +864,7 @@ declare namespace LocalJSX {
     }
     interface DiscordCodeBlock {
         /**
-          * The code to display.
+          * The code to display. If not supplied, add the code as <pre></pre> tags inside the component.
          */
         "code"?: string;
         /**

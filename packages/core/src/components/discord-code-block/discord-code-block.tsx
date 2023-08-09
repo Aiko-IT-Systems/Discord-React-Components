@@ -19,10 +19,10 @@ export class DiscordCodeBlock implements ComponentInterface {
 	public language?: string;
 
 	/**
-	 * The code to display.
+	 * The code to display. If not supplied, add the code as <pre></pre> tags inside the component.
 	 */
 	@Prop()
-	public code: string;
+	public code?: string;
 
 	public componentDidRender() {
 		hljs.highlightBlock(this.el);
