@@ -46,21 +46,7 @@
 }
 
 .discord-invite .discord-invite-info {
-	font-family:
-		'gg-sans',
-		system-ui,
-		-apple-system,
-		'Segoe UI',
-		Roboto,
-		'Helvetica Neue',
-		'Noto Sans',
-		'Liberation Sans',
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		'Noto Color Emoji';
+	font-family: var(--font-primary);
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;

@@ -2,21 +2,7 @@
 
 .discord-code-block-pre {
 	background-color: #2f3136;
-	font-family:
-		'gg-sans',
-		system-ui,
-		-apple-system,
-		'Segoe UI',
-		Roboto,
-		'Helvetica Neue',
-		'Noto Sans',
-		'Liberation Sans',
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		'Noto Color Emoji';
+	font-family: var(--font-code);
 	margin-top: 0.25rem;
 	white-space: pre-wrap;
 }

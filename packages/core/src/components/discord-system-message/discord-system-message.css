@@ -3,21 +3,7 @@
 	display: flex;
 	font-weight: 400;
 	font-size: 1rem;
-	font-family:
-		'gg-sans',
-		system-ui,
-		-apple-system,
-		'Segoe UI',
-		Roboto,
-		'Helvetica Neue',
-		'Noto Sans',
-		'Liberation Sans',
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		'Noto Color Emoji';
+	font-family: var(--font-primary);
 	padding: 0px 1em;
 	position: relative;
 	word-wrap: break-word;

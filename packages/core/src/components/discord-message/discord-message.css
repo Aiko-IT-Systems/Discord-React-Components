@@ -3,21 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	font-size: 0.9em;
-	font-family:
-		'gg-sans',
-		system-ui,
-		-apple-system,
-		'Segoe UI',
-		Roboto,
-		'Helvetica Neue',
-		'Noto Sans',
-		'Liberation Sans',
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		'Noto Color Emoji';
+	font-family: var(--font-primary);
 	padding: 0px 1em;
 	position: relative;
 	word-wrap: break-word;
@@ -188,21 +174,7 @@
 .discord-message .discord-message-body code {
 	background: #2f3136;
 	white-space: break-spaces;
-	font-family:
-		'gg-sans',
-		system-ui,
-		-apple-system,
-		'Segoe UI',
-		Roboto,
-		'Helvetica Neue',
-		'Noto Sans',
-		'Liberation Sans',
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji',
-		'Segoe UI Symbol',
-		'Noto Color Emoji';
+	font-family: var(--font-primary);
 }
 
 .discord-light-theme .discord-message .discord-message-timestamp,
