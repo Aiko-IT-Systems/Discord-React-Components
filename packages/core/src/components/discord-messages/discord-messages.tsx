@@ -1,6 +1,7 @@
 import { Component, ComponentInterface, h, Host, Prop } from '@stencil/core';
 import clsx from 'clsx';
 import { defaultBackground, defaultMode, defaultTheme } from '../../options';
+import hljs, { HLJSApi } from 'highlight.js';
 
 @Component({
 	tag: 'discord-messages',
@@ -50,6 +51,7 @@ export class DiscordMessages implements ComponentInterface {
 	}
 
 	public render() {
+		window.$hljs = hljs;
 		return (
 			<Host
 				class={clsx(
@@ -65,5 +67,11 @@ export class DiscordMessages implements ComponentInterface {
 				<slot></slot>
 			</Host>
 		);
+	}
+}
+
+declare global {
+	interface Window {
+		$hljs: HLJSApi;
 	}
 }

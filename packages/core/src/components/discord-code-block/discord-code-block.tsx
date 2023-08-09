@@ -24,6 +24,10 @@ export class DiscordCodeBlock implements ComponentInterface {
 	@Prop()
 	public code: string;
 
+	public componentDidRender() {
+		hljs.highlightBlock(this.el);
+	}
+
 	public render() {
 		// check if hljs has the language
 		const language = this.language ? (hljs.getLanguage(this.language) ? this.language : 'plaintext') : 'plaintext';
@@ -33,18 +37,18 @@ export class DiscordCodeBlock implements ComponentInterface {
 				{this.code ? (
 					<code class={`hljs language-${language}`} innerHTML={hljs.highlight(this.code, { language }).value} />
 				) : (
-					<code class={`hljs language-${language}`} innerHTML={this.highlight(language)}>
+					<code class={`hljs language-${language}`}>
 						<slot></slot>
 					</code>
 				)}
 			</Host>
 		);
 	}
-
+	/*
 	private highlight(language: string): string | undefined {
 		const code = this.el.querySelector('code');
 		if (!code) return undefined;
-		const hl = hljs.highlight(code.innerText, { language });
+		const hl = hljs.highlight(code.querySelector('pre')!.innerText.trimEnd(), { language });
 		return hl.value;
-	}
+	}*/
 }

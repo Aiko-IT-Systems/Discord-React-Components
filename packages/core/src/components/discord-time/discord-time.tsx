@@ -1,4 +1,5 @@
 import { Component, h, Host, Prop, State } from '@stencil/core';
+import { timestampToDate } from '../../util';
 
 const DATE_TYPE_FORMATS = {
 	t: { timeStyle: 'short' },
@@ -59,7 +60,7 @@ export class DiscordTime {
 	 * Generates a string for the time.
 	 */
 	private update() {
-		const date = new Date(this.timestamp);
+		const date = timestampToDate(this.timestamp);
 
 		if (this.format === 'R') {
 			const [formatted, interval] = getRelativeDate(date);
