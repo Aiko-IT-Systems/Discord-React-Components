@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 export const config: Config = {
 	namespace: 'aitsys-discord-components-core',
@@ -11,7 +12,7 @@ export const config: Config = {
 			componentCorePackage: '@aitsys/discord-components-core',
 			proxiesFile: '../react/src/index.ts',
 			includeDefineCustomElements: true,
-			includePolyfills: false
+			includePolyfills: true
 		}),
 		{
 			type: 'dist',
@@ -27,5 +28,8 @@ export const config: Config = {
 			serviceWorker: null,
 			copy: [{ src: '../static', dest: 'static/' }]
 		}
-	]
+	],
+	rollupPlugins: {
+		after: [nodePolyfills()]
+	}
 };

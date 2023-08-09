@@ -5,9 +5,9 @@ import { createReactComponent } from './react-component-lib';
 
 import type { JSX } from '@aitsys/discord-components-core';
 
-import { defineCustomElements } from '@aitsys/discord-components-core/loader';
+import { applyPolyfills, defineCustomElements } from '@aitsys/discord-components-core/loader';
 
-defineCustomElements();
+applyPolyfills().then(() => defineCustomElements());
 export const DiscordActionRow = /*@__PURE__*/ createReactComponent<JSX.DiscordActionRow, HTMLDiscordActionRowElement>('discord-action-row');
 export const DiscordAttachment = /*@__PURE__*/ createReactComponent<JSX.DiscordAttachment, HTMLDiscordAttachmentElement>('discord-attachment');
 export const DiscordAttachments = /*@__PURE__*/ createReactComponent<JSX.DiscordAttachments, HTMLDiscordAttachmentsElement>('discord-attachments');

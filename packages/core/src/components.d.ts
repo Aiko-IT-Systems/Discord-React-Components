@@ -17,6 +17,11 @@ export namespace Components {
          */
         "alt"?: string | undefined;
         /**
+          * The duration of the voice message in seconds
+          * @important Only applicable to voice messages
+         */
+        "durationSecs"?: number;
+        /**
           * The height of the image in pixels
          */
         "height"?: number;
@@ -25,12 +30,12 @@ export namespace Components {
          */
         "size": string;
         /**
-          * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file'
+          * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file' | 'voice'
          */
         "type": 'image' | 'video' | 'audio' | 'file' | 'voice';
         /**
-          * The URL for the image attachment
-          * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff)$/i`
+          * The URL for the attachment
+          * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff|ogg|mp3|mp4)$/i`
          */
         "url": string;
         /**
@@ -805,6 +810,11 @@ declare namespace LocalJSX {
          */
         "alt"?: string | undefined;
         /**
+          * The duration of the voice message in seconds
+          * @important Only applicable to voice messages
+         */
+        "durationSecs"?: number;
+        /**
           * The height of the image in pixels
          */
         "height"?: number;
@@ -813,12 +823,12 @@ declare namespace LocalJSX {
          */
         "size"?: string;
         /**
-          * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file'
+          * The type of file the attachment is. 'image' | 'video' | 'audio' | 'file' | 'voice'
          */
         "type"?: 'image' | 'video' | 'audio' | 'file' | 'voice';
         /**
-          * The URL for the image attachment
-          * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff)$/i`
+          * The URL for the attachment
+          * @important Should be a valid image URL, i.e. matching the regex `/\.(bmp|jpe?g|png|gif|webp|tiff|ogg|mp3|mp4)$/i`
          */
         "url"?: string;
         /**
