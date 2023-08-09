@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, ComponentInterface } from '@stencil/core';
+import { Component, ComponentInterface, Element, h, Host, Prop } from '@stencil/core';
 import hljs from 'highlight.js';
 
 @Component({
@@ -6,6 +6,12 @@ import hljs from 'highlight.js';
 	styleUrl: 'discord-code-block.css'
 })
 export class DiscordCodeBlock implements ComponentInterface {
+	/**
+	 * The DiscordCodeBlock element.
+	 */
+	@Element()
+	public el: HTMLElement;
+
 	/**
 	 * The language of the code block.
 	 */
@@ -24,8 +30,21 @@ export class DiscordCodeBlock implements ComponentInterface {
 
 		return (
 			<Host class="discord-code-block-pre discord-code-block-pre--multiline language">
-				<code class={`hljs language-${language}`} innerHTML={hljs.highlight(this.code, { language }).value} />
+				{this.code ? (
+					<code class={`hljs language-${language}`} innerHTML={hljs.highlight(this.code, { language }).value} />
+				) : (
+					<code class={`hljs language-${language}`} innerHTML={this.highlight(language)}>
+						<slot></slot>
+					</code>
+				)}
 			</Host>
 		);
+	}
+
+	private highlight(language: string): string | undefined {
+		const code = this.el.querySelector('code');
+		if (!code) return undefined;
+		const hl = hljs.highlight(code.innerText, { language });
+		return hl.value;
 	}
 }

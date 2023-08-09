@@ -248,6 +248,20 @@
 				>
 			</div>
 			<main>
+				<h3 class="title">Testing</h3>
+				<discord-messages>
+					<discord-message profile="lulalaby">
+						<discord-attachment
+							slot="attachments"
+							type="voice"
+							url="https://cdn.discordapp.com/attachments/856985905804869652/1118671118514016337/voice-message.ogg"
+							alt=""
+							height=""
+							width=""
+							size="12.12 KB"
+						/>
+					</discord-message>
+				</discord-messages>
 				<h3 class="title">A normal conversation</h3>
 				<discord-messages>
 					<discord-header
@@ -295,7 +309,9 @@
 						webhook="false"
 						edited="false"
 					>
-						<a target="_blank" href="https://www.youtube.com/watch?v=aKRyZelOp7Y">https://www.youtube.com/watch?v=aKRyZelOp7Y</a>
+						<a target="_blank" href="https://www.youtube.com/watch?v=aKRyZelOp7Y" rel="noopener"
+							>https://www.youtube.com/watch?v=aKRyZelOp7Y</a
+						>
 						<discord-embed
 							slot="embeds"
 							provider="YouTube"
@@ -329,9 +345,10 @@
 							slot="attachments"
 							type="audio"
 							url="https://cdn.discordapp.com/attachments/1010253044866367528/1138245796882567168/meow3.ogg"
-							alt=""
+							alt="meow3.ogg"
 							height=""
 							width=""
+							size="12.12 KB"
 						/>
 					</discord-message>
 					<discord-message
@@ -364,11 +381,21 @@
 					</discord-message>
 					<discord-message profile="skyra">
 						asdf
-						<discord-code-block
-							code='const test = "asdf"; console.log(test);
-for(let a of b) {}'
-							language="javascript"
-						></discord-code-block>
+						<discord-code-block language="csharp">
+using System;
+
+class Program
+{
+	static void Main()
+	{
+		// Generate a random number between 1 and 100
+		Random random = new Random();
+		int randomNumber = random.Next(1, 101);
+
+		Console.WriteLine("Random number: " + randomNumber);
+	}
+}
+						</discord-code-block>
 
 						<discord-time timestamp="1664412460102" format="R"></discord-time>
 
@@ -513,6 +540,21 @@ for(let a of b) {}'
 							type="voice"
 							url="https://cdn.discordapp.com/attachments/856985905804869652/1138759312529969262/1100428043555709072.mp3"
 							alt=""
+							height=""
+							width=""
+							size="56.06 KB"
+							duration-secs="5.100043248"
+						/>
+					</discord-message>
+				</discord-messages>
+				<h3 class="title">Audio Attachments</h3>
+				<discord-messages>
+					<discord-message profile="lulalaby">
+						<discord-attachment
+							slot="attachments"
+							type="audio"
+							url="https://cdn.discordapp.com/attachments/856985905804869652/1138759312529969262/1100428043555709072.mp3"
+							alt="1100428043555709072.mp3"
 							height=""
 							width=""
 							size="56.06 KB"
