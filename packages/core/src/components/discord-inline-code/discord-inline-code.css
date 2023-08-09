@@ -1,0 +1,7 @@
+discord-inline-code {
+	background-color: #2b2d31;
+}
+
+discord-inline-code > .in-embed {
+	background-color: #1e1f22;
+}

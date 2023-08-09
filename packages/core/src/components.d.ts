@@ -61,11 +61,12 @@ export namespace Components {
          */
         "emojiName": string;
         /**
-          * The type of button this is, this will change the color of the button. Valid values: `primary`, `secondary`, `success`, `destructive`.
+          * The type of button this is, this will change the color of the button. Valid values: `primary`, `secondary`, `success`, `danger` (or `destructive`), `link`.
+          * @default 'primary'
          */
-        "type": 'primary' | 'secondary' | 'success' | 'destructive';
+        "type": 'primary' | 'secondary' | 'success' | 'danger' | 'destructive' | 'link';
         /**
-          * The URL for the button. Setting this will force the button type to be `secondary`.
+          * The URL for the button. Setting this will force the button type to be `link`.
          */
         "url": string;
     }
@@ -231,6 +232,10 @@ export namespace Components {
         "icon"?: string;
     }
     interface DiscordInlineCode {
+        /**
+          * Whether the inline code is within an embed.
+         */
+        "inEmbed": boolean;
     }
     interface DiscordInvite {
         /**
@@ -854,11 +859,12 @@ declare namespace LocalJSX {
          */
         "emojiName"?: string;
         /**
-          * The type of button this is, this will change the color of the button. Valid values: `primary`, `secondary`, `success`, `destructive`.
+          * The type of button this is, this will change the color of the button. Valid values: `primary`, `secondary`, `success`, `danger` (or `destructive`), `link`.
+          * @default 'primary'
          */
-        "type"?: 'primary' | 'secondary' | 'success' | 'destructive';
+        "type"?: 'primary' | 'secondary' | 'success' | 'danger' | 'destructive' | 'link';
         /**
-          * The URL for the button. Setting this will force the button type to be `secondary`.
+          * The URL for the button. Setting this will force the button type to be `link`.
          */
         "url"?: string;
     }
@@ -1024,6 +1030,10 @@ declare namespace LocalJSX {
         "icon"?: string;
     }
     interface DiscordInlineCode {
+        /**
+          * Whether the inline code is within an embed.
+         */
+        "inEmbed"?: boolean;
     }
     interface DiscordInvite {
         /**

@@ -31,6 +31,15 @@
 	background-color: #2d7d46;
 }
 
+.discord-button.discord-button-danger {
+	color: #fff;
+	background-color: #ed4245;
+}
+
+.discord-button.discord-button-danger.discord-button-hoverable:hover {
+	background-color: #c03537;
+}
+
 .discord-button.discord-button-destructive {
 	color: #fff;
 	background-color: #ed4245;
@@ -55,6 +64,15 @@
 }
 
 .discord-button.discord-button-secondary.discord-button-hoverable:hover {
+	background-color: #5d6269;
+}
+
+.discord-button.discord-button-link {
+	color: #fff;
+	background-color: #4f545c;
+}
+
+.discord-button.discord-button-link.discord-button-hoverable:hover {
 	background-color: #5d6269;
 }
 

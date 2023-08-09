@@ -68,7 +68,9 @@ export class DiscordEmbedField implements ComponentInterface {
 				)}
 			>
 				{emojiParsedEmbedFieldTitle && <div class="discord-field-title">{[...emojiParsedEmbedFieldTitle]}</div>}
-				<slot></slot>
+				<div class="discord-field-value">
+					<slot></slot>
+				</div>
 			</Host>
 		);
 	}

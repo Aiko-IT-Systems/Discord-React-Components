@@ -5,6 +5,9 @@
 	line-height: 150%;
 	margin-bottom: 2px;
 	margin-top: 2px;
+	justify-self: start;
+	-ms-flex-item-align: start;
+	align-self: start;
 }
 
 .discord-light-theme .discord-embed {
@@ -32,7 +35,7 @@
 }
 
 .discord-embed .discord-embed-wrapper {
-	background-color: #2f3136;
+	background-color: #2b2d31;
 	max-width: 520px;
 	border: 1px solid rgba(46, 48, 54, 0.6);
 	border-radius: 0 4px 4px 0;
@@ -48,7 +51,7 @@
 }
 
 .discord-embed .discord-embed-wrapper .discord-embed-grid {
-	display: inline-grid;
+	display: grid;
 	grid-template-columns: auto -webkit-min-content;
 	grid-template-columns: auto min-content;
 	grid-template-columns: auto;

@@ -26,7 +26,7 @@ export class DiscordButton implements ComponentInterface {
 	public emojiName = 'emoji';
 
 	/**
-	 * The URL for the button. Setting this will force the button type to be `secondary`.
+	 * The URL for the button. Setting this will force the button type to be `link`.
 	 */
 	@Prop()
 	public url: string;
@@ -39,17 +39,18 @@ export class DiscordButton implements ComponentInterface {
 
 	/**
 	 * The type of button this is, this will change the color of the button.
-	 * Valid values: `primary`, `secondary`, `success`, `destructive`.
+	 * Valid values: `primary`, `secondary`, `success`, `danger` (or `destructive`), `link`.
+	 * @default 'primary'
 	 */
 	@Prop()
-	public type: 'primary' | 'secondary' | 'success' | 'destructive' = 'secondary';
+	public type: 'primary' | 'secondary' | 'success' | 'danger' | 'destructive' | 'link' = 'primary';
 
 	@Watch('type')
 	public handleType(value: string) {
 		if (typeof value !== 'string') {
 			throw new TypeError('DiscordButton `type` prop must be a string.');
-		} else if (!['primary', 'secondary', 'success', 'destructive'].includes(value)) {
-			throw new RangeError("DiscordButton `type` prop must be one of: 'primary', 'secondary', 'success', 'destructive'");
+		} else if (!['primary', 'secondary', 'success', 'danger', 'destructive', 'link'].includes(value)) {
+			throw new RangeError("DiscordButton `type` prop must be one of: 'primary', 'secondary', 'success', 'danger', 'destructive', 'link'");
 		}
 	}
 
@@ -71,7 +72,7 @@ export class DiscordButton implements ComponentInterface {
 		);
 
 		return this.url && !this.disabled ? (
-			<a class="discord-button discord-button-secondary" href={this.url} target="_blank" rel="noopener noreferrer">
+			<a class="discord-button discord-button-link" href={this.url} target="_blank" rel="noopener noreferrer">
 				{content}
 			</a>
 		) : (

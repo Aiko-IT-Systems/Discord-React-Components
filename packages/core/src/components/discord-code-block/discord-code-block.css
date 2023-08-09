@@ -5,6 +5,7 @@
 	font-family: var(--font-code);
 	margin-top: 0.25rem;
 	white-space: pre-wrap;
+	width: 60%;
 }
 
 .discord-code-block-pre--multiline {

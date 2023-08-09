@@ -119,22 +119,22 @@
 }
 
 .discord-message .discord-message-timestamp {
-	color: #72767d;
+	color: #949aa4;
 	font-size: 12px;
 	margin-left: 3px;
 }
 
 .discord-light-theme .discord-message .discord-message-timestamp {
-	color: #747f8d;
+	color: #949aa4;
 }
 
 .discord-message .discord-message-edited {
-	color: #72767d;
+	color: #949aa4;
 	font-size: 10px;
 }
 
 .discord-light-theme .discord-message .discord-message-edited {
-	color: #99aab5;
+	color: #949aa4;
 }
 
 .discord-message .discord-message-content {
