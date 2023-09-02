@@ -100,6 +100,12 @@ export class DiscordMessage implements ComponentInterface {
 	public roleName: string;
 
 	/**
+	 * Whether this message is a system message.
+	 */
+	@Prop()
+	public system = false;
+
+	/**
 	 * Whether to highlight this message.
 	 */
 	@Prop()
@@ -152,7 +158,8 @@ export class DiscordMessage implements ComponentInterface {
 			roleIcon: this.roleIcon,
 			roleName: this.roleName,
 			clyde: this.clyde,
-			webhook: this.webhook
+			webhook: this.webhook,
+			system: this.system
 		};
 		const profileData: Profile = Reflect.get(profiles, this.profile) ?? {};
 		const profile: Profile = { ...defaultData, ...profileData, ...{ avatar: resolveAvatar(profileData.avatar ?? this.avatar) } };
@@ -206,6 +213,7 @@ export class DiscordMessage implements ComponentInterface {
 									compact={parent.compactMode}
 									clyde={profile.clyde ?? false}
 									webhook={profile.webhook ?? false}
+									system={profile.system ?? false}
 								/>
 								<span class="discord-message-timestamp">{this.timestamp}</span>
 							</Fragment>
@@ -224,6 +232,7 @@ export class DiscordMessage implements ComponentInterface {
 									compact={parent.compactMode}
 									clyde={profile.clyde ?? false}
 									webhook={profile.webhook ?? false}
+									system={profile.system ?? false}
 								/>
 							)}
 							<span class="discord-message-markup">

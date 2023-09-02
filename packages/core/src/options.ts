@@ -22,6 +22,7 @@ export interface Profile {
 	roleName?: string;
 	clyde?: boolean;
 	webhook?: boolean;
+	system?: boolean;
 }
 
 export interface DiscordMessageOptions {
@@ -41,7 +42,8 @@ export const defaultDiscordAvatars: Omit<Avatars, 'default'> = {
 	orange: 'https://cdn.discordapp.com/embed/avatars/3.png',
 	red: 'https://cdn.discordapp.com/embed/avatars/4.png',
 	pink: 'https://cdn.discordapp.com/embed/avatars/5.png',
-	clyde: 'https://i.imgur.com/CqOlANM.gif'
+	clyde: 'https://i.imgur.com/CqOlANM.gif',
+	automod: 'https://i.imgur.com/xKyKfyj.gif'
 };
 
 export interface Emoji {

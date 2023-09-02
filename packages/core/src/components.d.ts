@@ -45,6 +45,46 @@ export namespace Components {
     }
     interface DiscordAttachments {
     }
+    interface DiscordAutomod {
+        /**
+          * The timestamp to use for the message date.
+         */
+        "timestamp": DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour": boolean;
+    }
+    interface DiscordAutomodEmbed {
+        /**
+          * Whether the embed is active.
+          * @default false
+         */
+        "active": boolean;
+        /**
+          * The color to use for the embed's left border. Can be any [CSS color value](https://www.w3schools.com/cssref/css_colors_legal.asp).
+         */
+        "color": string;
+        /**
+          * The user's color.
+         */
+        "userColor": string;
+        /**
+          * The user's avatar URL.
+         */
+        "userImage": string;
+        /**
+          * The user's name.
+         */
+        "userName": string;
+    }
+    interface DiscordAutomodEmbedDescription {
+        /**
+          * Whether the embed description is active.
+          * @default false
+         */
+        "active": boolean;
+    }
     interface DiscordBold {
     }
     interface DiscordButton {
@@ -294,7 +334,7 @@ export namespace Components {
         /**
           * The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
          */
-        "type": 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash';
+        "type": 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' | 'automod';
     }
     interface DiscordMessage {
         /**
@@ -350,6 +390,10 @@ export namespace Components {
           * Whether the message author is a server crosspost webhook or not. Only works if `bot` is `false` or `undefined`.
          */
         "server": boolean;
+        /**
+          * Whether this message is a system message.
+         */
+        "system": boolean;
         /**
           * The timestamp to use for the message date.
          */
@@ -596,6 +640,24 @@ declare global {
         prototype: HTMLDiscordAttachmentsElement;
         new (): HTMLDiscordAttachmentsElement;
     };
+    interface HTMLDiscordAutomodElement extends Components.DiscordAutomod, HTMLStencilElement {
+    }
+    var HTMLDiscordAutomodElement: {
+        prototype: HTMLDiscordAutomodElement;
+        new (): HTMLDiscordAutomodElement;
+    };
+    interface HTMLDiscordAutomodEmbedElement extends Components.DiscordAutomodEmbed, HTMLStencilElement {
+    }
+    var HTMLDiscordAutomodEmbedElement: {
+        prototype: HTMLDiscordAutomodEmbedElement;
+        new (): HTMLDiscordAutomodEmbedElement;
+    };
+    interface HTMLDiscordAutomodEmbedDescriptionElement extends Components.DiscordAutomodEmbedDescription, HTMLStencilElement {
+    }
+    var HTMLDiscordAutomodEmbedDescriptionElement: {
+        prototype: HTMLDiscordAutomodEmbedDescriptionElement;
+        new (): HTMLDiscordAutomodEmbedDescriptionElement;
+    };
     interface HTMLDiscordBoldElement extends Components.DiscordBold, HTMLStencilElement {
     }
     var HTMLDiscordBoldElement: {
@@ -774,6 +836,9 @@ declare global {
         "discord-action-row": HTMLDiscordActionRowElement;
         "discord-attachment": HTMLDiscordAttachmentElement;
         "discord-attachments": HTMLDiscordAttachmentsElement;
+        "discord-automod": HTMLDiscordAutomodElement;
+        "discord-automod-embed": HTMLDiscordAutomodEmbedElement;
+        "discord-automod-embed-description": HTMLDiscordAutomodEmbedDescriptionElement;
         "discord-bold": HTMLDiscordBoldElement;
         "discord-button": HTMLDiscordButtonElement;
         "discord-code-block": HTMLDiscordCodeBlockElement;
@@ -842,6 +907,46 @@ declare namespace LocalJSX {
         "width"?: number;
     }
     interface DiscordAttachments {
+    }
+    interface DiscordAutomod {
+        /**
+          * The timestamp to use for the message date.
+         */
+        "timestamp"?: DiscordTimestamp;
+        /**
+          * Whether to use 24-hour format for the timestamp.
+         */
+        "twentyFour"?: boolean;
+    }
+    interface DiscordAutomodEmbed {
+        /**
+          * Whether the embed is active.
+          * @default false
+         */
+        "active"?: boolean;
+        /**
+          * The color to use for the embed's left border. Can be any [CSS color value](https://www.w3schools.com/cssref/css_colors_legal.asp).
+         */
+        "color"?: string;
+        /**
+          * The user's color.
+         */
+        "userColor"?: string;
+        /**
+          * The user's avatar URL.
+         */
+        "userImage"?: string;
+        /**
+          * The user's name.
+         */
+        "userName"?: string;
+    }
+    interface DiscordAutomodEmbedDescription {
+        /**
+          * Whether the embed description is active.
+          * @default false
+         */
+        "active"?: boolean;
     }
     interface DiscordBold {
     }
@@ -1092,7 +1197,7 @@ declare namespace LocalJSX {
         /**
           * The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
          */
-        "type"?: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash';
+        "type"?: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' | 'automod';
     }
     interface DiscordMessage {
         /**
@@ -1148,6 +1253,10 @@ declare namespace LocalJSX {
           * Whether the message author is a server crosspost webhook or not. Only works if `bot` is `false` or `undefined`.
          */
         "server"?: boolean;
+        /**
+          * Whether this message is a system message.
+         */
+        "system"?: boolean;
         /**
           * The timestamp to use for the message date.
          */
@@ -1378,6 +1487,9 @@ declare namespace LocalJSX {
         "discord-action-row": DiscordActionRow;
         "discord-attachment": DiscordAttachment;
         "discord-attachments": DiscordAttachments;
+        "discord-automod": DiscordAutomod;
+        "discord-automod-embed": DiscordAutomodEmbed;
+        "discord-automod-embed-description": DiscordAutomodEmbedDescription;
         "discord-bold": DiscordBold;
         "discord-button": DiscordButton;
         "discord-code-block": DiscordCodeBlock;
@@ -1416,6 +1528,9 @@ declare module "@stencil/core" {
             "discord-action-row": LocalJSX.DiscordActionRow & JSXBase.HTMLAttributes<HTMLDiscordActionRowElement>;
             "discord-attachment": LocalJSX.DiscordAttachment & JSXBase.HTMLAttributes<HTMLDiscordAttachmentElement>;
             "discord-attachments": LocalJSX.DiscordAttachments & JSXBase.HTMLAttributes<HTMLDiscordAttachmentsElement>;
+            "discord-automod": LocalJSX.DiscordAutomod & JSXBase.HTMLAttributes<HTMLDiscordAutomodElement>;
+            "discord-automod-embed": LocalJSX.DiscordAutomodEmbed & JSXBase.HTMLAttributes<HTMLDiscordAutomodEmbedElement>;
+            "discord-automod-embed-description": LocalJSX.DiscordAutomodEmbedDescription & JSXBase.HTMLAttributes<HTMLDiscordAutomodEmbedDescriptionElement>;
             "discord-bold": LocalJSX.DiscordBold & JSXBase.HTMLAttributes<HTMLDiscordBoldElement>;
             "discord-button": LocalJSX.DiscordButton & JSXBase.HTMLAttributes<HTMLDiscordButtonElement>;
             "discord-code-block": LocalJSX.DiscordCodeBlock & JSXBase.HTMLAttributes<HTMLDiscordCodeBlockElement>;

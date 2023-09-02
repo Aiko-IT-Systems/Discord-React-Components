@@ -34,15 +34,15 @@ export class DiscordMention implements ComponentInterface {
 	 * Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
 	 */
 	@Prop()
-	public type: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' = 'user';
+	public type: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' | 'automod' = 'user';
 
 	@Watch('type')
 	public handleType(value: string) {
 		if (typeof value !== 'string') {
 			throw new TypeError('DiscordMention `type` prop must be a string.');
-		} else if (!['user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash'].includes(value)) {
+		} else if (!['user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash', 'automod'].includes(value)) {
 			throw new RangeError(
-				"DiscordMention `type` prop must be one of: 'user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash'"
+				"DiscordMention `type` prop must be one of: 'user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash', or 'automod'."
 			);
 		}
 	}
@@ -66,11 +66,15 @@ export class DiscordMention implements ComponentInterface {
 	}
 
 	public setHoverColor() {
-		this.el.style.backgroundColor = hexToRgba(this.color, 0.3);
+		if (this.type !== 'automod') {
+			this.el.style.backgroundColor = hexToRgba(this.color, 0.3);
+		}
 	}
 
 	public resetHoverColor() {
-		this.el.style.backgroundColor = hexToRgba(this.color, 0.1);
+		if (this.type !== 'automod') {
+			this.el.style.backgroundColor = hexToRgba(this.color, 0.1);
+		}
 	}
 
 	public render() {
@@ -79,7 +83,12 @@ export class DiscordMention implements ComponentInterface {
 		const colorStyle: {
 			color?: string;
 			'background-color'?: string;
-		} = !color || type !== 'role' ? {} : { color, 'background-color': hexToRgba(color, 0.1) };
+		} =
+			!color || (type !== 'role' && type !== 'automod')
+				? {}
+				: type === 'role'
+				? { color, 'background-color': hexToRgba(color, 0.1) }
+				: { color: hexToRgba(color, 1), 'background-color': undefined };
 
 		let mentionPrepend = '';
 
@@ -105,6 +114,8 @@ export class DiscordMention implements ComponentInterface {
 				break;
 			case 'slash':
 				mentionPrepend = '/';
+				break;
+			case 'automod':
 				break;
 		}
 
