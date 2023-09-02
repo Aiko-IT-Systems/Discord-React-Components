@@ -8,9 +8,9 @@
 		"typescript.tsdk": "node_modules\\typescript\\lib",
 		"discord.detailsIdling": "Sleeping",
 		"discord.detailsEditing": "Working on {workspace}",
-		"discord.lowerDetailsEditing": "Editing {file_name}:{current_line}/{total_lines}",
+		"discord.lowerDetailsEditing": "Editing {file_name}",
 		"discord.removeRemoteRepository": true,
-		"discord.lowerDetailsNoWorkspaceFound": "Editing {file_name}:{current_line}/{total_lines}",
+		"discord.lowerDetailsNoWorkspaceFound": "Editing {file_name}",
 		"discord.largeImageIdling": "Sleeping"
 	}
 }
