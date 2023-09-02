@@ -64,5 +64,6 @@
 .discord-message .discord-mention .discord-mention-fixed-icon {
 	width: 1rem;
 	height: 1rem;
-	object-fit: contain;
+	vertical-align: middle;
+	margin-bottom: .2rem;
 }
