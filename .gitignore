@@ -44,3 +44,4 @@ UserInterfaceState.xcuserstate
 .env
 node_modules/
 .yarn/
+hydrate/
