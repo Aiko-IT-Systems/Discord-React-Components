@@ -5,6 +5,10 @@ import ChannelIcon from '../svgs/channel-icon';
 import ChannelThread from '../svgs/channel-thread';
 import LockedVoiceChannel from '../svgs/locked-voice-channel';
 import VoiceChannel from '../svgs/voice-channel';
+import CustomizeCommunity from '../svgs/customize-community';
+import BrowseChannels from '../svgs/browse-channels';
+import ServerGuide from '../svgs/server-guide';
+import Members from '../svgs/members';
 
 @Component({
 	tag: 'discord-mention',
@@ -34,15 +38,44 @@ export class DiscordMention implements ComponentInterface {
 	 * Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
 	 */
 	@Prop()
-	public type: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' | 'automod' = 'user';
+	public type:
+		| 'user'
+		| 'channel'
+		| 'role'
+		| 'voice'
+		| 'locked'
+		| 'thread'
+		| 'forum'
+		| 'slash'
+		| 'automod'
+		| 'customize'
+		| 'browse'
+		| 'guide'
+		| 'members' = 'user';
 
 	@Watch('type')
 	public handleType(value: string) {
 		if (typeof value !== 'string') {
 			throw new TypeError('DiscordMention `type` prop must be a string.');
-		} else if (!['user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash', 'automod'].includes(value)) {
+		} else if (
+			![
+				'user',
+				'channel',
+				'role',
+				'voice',
+				'locked',
+				'thread',
+				'forum',
+				'slash',
+				'automod',
+				'customize',
+				'browse',
+				'guide',
+				'members'
+			].includes(value)
+		) {
 			throw new RangeError(
-				"DiscordMention `type` prop must be one of: 'user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash', or 'automod'."
+				"DiscordMention `type` prop must be one of: 'user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash', 'automod', 'customize', 'browse', 'guide' or 'members'."
 			);
 		}
 	}
@@ -116,6 +149,18 @@ export class DiscordMention implements ComponentInterface {
 				mentionPrepend = '/';
 				break;
 			case 'automod':
+				break;
+			case 'customize':
+				mentionPrepend = <CustomizeCommunity class="discord-mention-fixed-icon" />;
+				break;
+			case 'browse':
+				mentionPrepend = <BrowseChannels class="discord-mention-fixed-icon" />;
+				break;
+			case 'guide':
+				mentionPrepend = <ServerGuide class="discord-mention-fixed-icon" />;
+				break;
+			case 'members':
+				mentionPrepend = <Members class="discord-mention-fixed-icon" />;
 				break;
 		}
 

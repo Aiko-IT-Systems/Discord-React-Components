@@ -334,7 +334,19 @@ export namespace Components {
         /**
           * The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
          */
-        "type": 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' | 'automod';
+        "type": | 'user'
+		| 'channel'
+		| 'role'
+		| 'voice'
+		| 'locked'
+		| 'thread'
+		| 'forum'
+		| 'slash'
+		| 'automod'
+		| 'customize'
+		| 'browse'
+		| 'guide'
+		| 'members';
     }
     interface DiscordMessage {
         /**
@@ -1197,7 +1209,19 @@ declare namespace LocalJSX {
         /**
           * The type of mention this should be. This will prepend the proper prefix character. Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
          */
-        "type"?: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' | 'automod';
+        "type"?: | 'user'
+		| 'channel'
+		| 'role'
+		| 'voice'
+		| 'locked'
+		| 'thread'
+		| 'forum'
+		| 'slash'
+		| 'automod'
+		| 'customize'
+		| 'browse'
+		| 'guide'
+		| 'members';
     }
     interface DiscordMessage {
         /**

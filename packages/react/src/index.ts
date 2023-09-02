@@ -11,6 +11,14 @@ applyPolyfills().then(() => defineCustomElements());
 export const DiscordActionRow = /*@__PURE__*/ createReactComponent<JSX.DiscordActionRow, HTMLDiscordActionRowElement>('discord-action-row');
 export const DiscordAttachment = /*@__PURE__*/ createReactComponent<JSX.DiscordAttachment, HTMLDiscordAttachmentElement>('discord-attachment');
 export const DiscordAttachments = /*@__PURE__*/ createReactComponent<JSX.DiscordAttachments, HTMLDiscordAttachmentsElement>('discord-attachments');
+export const DiscordAutomod = /*@__PURE__*/ createReactComponent<JSX.DiscordAutomod, HTMLDiscordAutomodElement>('discord-automod');
+export const DiscordAutomodEmbed = /*@__PURE__*/ createReactComponent<JSX.DiscordAutomodEmbed, HTMLDiscordAutomodEmbedElement>(
+	'discord-automod-embed'
+);
+export const DiscordAutomodEmbedDescription = /*@__PURE__*/ createReactComponent<
+	JSX.DiscordAutomodEmbedDescription,
+	HTMLDiscordAutomodEmbedDescriptionElement
+>('discord-automod-embed-description');
 export const DiscordBold = /*@__PURE__*/ createReactComponent<JSX.DiscordBold, HTMLDiscordBoldElement>('discord-bold');
 export const DiscordButton = /*@__PURE__*/ createReactComponent<JSX.DiscordButton, HTMLDiscordButtonElement>('discord-button');
 export const DiscordCodeBlock = /*@__PURE__*/ createReactComponent<JSX.DiscordCodeBlock, HTMLDiscordCodeBlockElement>('discord-code-block');
