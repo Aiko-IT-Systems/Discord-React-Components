@@ -463,9 +463,9 @@
     typescript "^5.2.2"
 
 "@stencil/core@^4.0.1":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.3.0.tgz#ab7c4eedce1bd8947bfefdf6a0c19372f88c7fb6"
-  integrity sha512-WYjftKg5fuqO7mf3nTl1aCRurkeMmfEF38WcBG4VLF6UPQ+MA76/koedGR2LGhATGByx+pbxR4iRxAr2Bspc9A==
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.4.0.tgz#3cdc9eafe1ca6b3f8b6d861a3b849d2c65d06a9f"
+  integrity sha512-YlLyCqGBsMEuZb3XTO/STT0TX9eSwjoVhCJgtjVfQOF+ebIMVlojTh40CmDveWiWbth687cbr6S2heeussV8Sg==
 
 "@stencil/react-output-target@^0.5.3":
   version "0.5.3"
@@ -538,9 +538,9 @@
   integrity sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==
 
 "@types/prop-types@*":
-  version "15.7.7"
-  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.7.tgz#f9361f7b87fd5d8188b2c998db0a1f47e9fb391a"
-  integrity sha512-FbtmBWCcSa2J4zL781Zf1p5YUBXQomPEcep9QZCfRfQgTxz3pJWiDFLebohZ9fFntX5ibzOkSsrJ0TEew8cAog==
+  version "15.7.8"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.8.tgz#805eae6e8f41bd19e88917d2ea200dc992f405d3"
+  integrity sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==
 
 "@types/react-dom@18.2.8":
   version "18.2.8"
