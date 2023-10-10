@@ -45,9 +45,13 @@ interface AuthorInfoProps {
 	 */
 	clyde: boolean;
 	/**
-	 * Whether this author is a webhool. Does not work with `bot`, `clyde`, `server` or `verified`.
+	 * Whether this author is a webhook. Does not work with `bot`, `clyde`, `server` or `verified`.
 	 */
 	webhook: boolean;
+	/**
+	 * Whether this bot is official from Discord aka System. Only works if `bot` is `true`
+	 */
+	system: boolean;
 }
 
 export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
@@ -61,7 +65,8 @@ export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
 	verified,
 	compact,
 	clyde,
-	webhook
+	webhook,
+	system
 }) => (
 	<span class="discord-author-info">
 		{!compact && (
@@ -77,12 +82,19 @@ export const AuthorInfo: FunctionalComponent<AuthorInfoProps> = ({
 				{/* If bot is true then we need to render a Bot tag */}
 				{clyde && !webhook && !bot && !server && (
 					<span class="discord-application-tag discord-application-tag-clyde">
-						{/* If verified is true then a verified checkmark should be prefixed */}
+						{/* If clyde is true then a verified checkmark should be prefixed */}
 						{clyde && <ClydeAiTag />}
 						AI
 					</span>
 				)}
-				{bot && !webhook && !server && !clyde && (
+				{bot && system && !webhook && !server && !clyde && (
+					<span class="discord-application-tag">
+						{/* If system is true then a verified checkmark should be prefixed */}
+						{system && <VerifiedTick />}
+						System
+					</span>
+				)}
+				{bot && !system && !webhook && !server && !clyde && (
 					<span class="discord-application-tag">
 						{/* If verified is true then a verified checkmark should be prefixed */}
 						{verified && <VerifiedTick />}

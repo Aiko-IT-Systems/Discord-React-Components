@@ -33,6 +33,15 @@
 	position: relative;
 }
 
+.discord-automod-mention {
+	background-color: unset !important;
+}
+
+.discord-automod-mention:hover {
+	background-color: unset !important;
+	text-decoration: underline;
+}
+
 .discord-light-theme .discord-message .discord-mention {
 	color: #687dc6;
 	background-color: hsla(235, 85.6%, 64.7%, 0.15);
@@ -50,4 +59,11 @@
 	position: absolute;
 	left: 0.125rem;
 	top: 0.125rem;
+}
+
+.discord-message .discord-mention .discord-mention-fixed-icon {
+	width: 1rem;
+	height: 1rem;
+	vertical-align: middle;
+	margin-bottom: .2rem;
 }

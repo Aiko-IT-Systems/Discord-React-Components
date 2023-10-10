@@ -5,6 +5,10 @@ import ChannelIcon from '../svgs/channel-icon';
 import ChannelThread from '../svgs/channel-thread';
 import LockedVoiceChannel from '../svgs/locked-voice-channel';
 import VoiceChannel from '../svgs/voice-channel';
+import CustomizeCommunity from '../svgs/customize-community';
+import BrowseChannels from '../svgs/browse-channels';
+import ServerGuide from '../svgs/server-guide';
+import Members from '../svgs/members';
 
 @Component({
 	tag: 'discord-mention',
@@ -34,15 +38,44 @@ export class DiscordMention implements ComponentInterface {
 	 * Valid values: `user`, `channel`, `role`, `voice`, `locked`, `thread`, `forum`, and `slash`.
 	 */
 	@Prop()
-	public type: 'user' | 'channel' | 'role' | 'voice' | 'locked' | 'thread' | 'forum' | 'slash' = 'user';
+	public type:
+		| 'user'
+		| 'channel'
+		| 'role'
+		| 'voice'
+		| 'locked'
+		| 'thread'
+		| 'forum'
+		| 'slash'
+		| 'automod'
+		| 'customize'
+		| 'browse'
+		| 'guide'
+		| 'members' = 'user';
 
 	@Watch('type')
 	public handleType(value: string) {
 		if (typeof value !== 'string') {
 			throw new TypeError('DiscordMention `type` prop must be a string.');
-		} else if (!['user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash'].includes(value)) {
+		} else if (
+			![
+				'user',
+				'channel',
+				'role',
+				'voice',
+				'locked',
+				'thread',
+				'forum',
+				'slash',
+				'automod',
+				'customize',
+				'browse',
+				'guide',
+				'members'
+			].includes(value)
+		) {
 			throw new RangeError(
-				"DiscordMention `type` prop must be one of: 'user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash'"
+				"DiscordMention `type` prop must be one of: 'user', 'channel', 'role', 'voice', 'locked', 'thread', 'forum', 'slash', 'automod', 'customize', 'browse', 'guide' or 'members'."
 			);
 		}
 	}
@@ -66,11 +99,15 @@ export class DiscordMention implements ComponentInterface {
 	}
 
 	public setHoverColor() {
-		this.el.style.backgroundColor = hexToRgba(this.color, 0.3);
+		if (this.type !== 'automod') {
+			this.el.style.backgroundColor = hexToRgba(this.color, 0.3);
+		}
 	}
 
 	public resetHoverColor() {
-		this.el.style.backgroundColor = hexToRgba(this.color, 0.1);
+		if (this.type !== 'automod') {
+			this.el.style.backgroundColor = hexToRgba(this.color, 0.1);
+		}
 	}
 
 	public render() {
@@ -79,7 +116,12 @@ export class DiscordMention implements ComponentInterface {
 		const colorStyle: {
 			color?: string;
 			'background-color'?: string;
-		} = !color || type !== 'role' ? {} : { color, 'background-color': hexToRgba(color, 0.1) };
+		} =
+			!color || (type !== 'role' && type !== 'automod')
+				? {}
+				: type === 'role'
+				? { color, 'background-color': hexToRgba(color, 0.1) }
+				: { color: hexToRgba(color, 1), 'background-color': undefined };
 
 		let mentionPrepend = '';
 
@@ -105,6 +147,20 @@ export class DiscordMention implements ComponentInterface {
 				break;
 			case 'slash':
 				mentionPrepend = '/';
+				break;
+			case 'automod':
+				break;
+			case 'customize':
+				mentionPrepend = <CustomizeCommunity class="discord-mention-fixed-icon" />;
+				break;
+			case 'browse':
+				mentionPrepend = <BrowseChannels class="discord-mention-fixed-icon" />;
+				break;
+			case 'guide':
+				mentionPrepend = <ServerGuide class="discord-mention-fixed-icon" />;
+				break;
+			case 'members':
+				mentionPrepend = <Members class="discord-mention-fixed-icon" />;
 				break;
 		}
 

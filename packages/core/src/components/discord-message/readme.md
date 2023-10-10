@@ -19,6 +19,7 @@
 | `roleIcon`   | `role-icon`   | The message author's role icon URL.                                                                                           | `string`                           | `undefined`             |
 | `roleName`   | `role-name`   | The name of the role to use as alternative image text.                                                                        | `string`                           | `undefined`             |
 | `server`     | `server`      | Whether the message author is a server crosspost webhook or not. Only works if `bot` is `false` or `undefined`.               | `boolean`                          | `false`                 |
+| `system`     | `system`      | Whether this message is a system message.                                                                                     | `boolean`                          | `false`                 |
 | `timestamp`  | `timestamp`   | The timestamp to use for the message date.                                                                                    | `Date \| null \| number \| string` | `new Date()`            |
 | `twentyFour` | `twenty-four` | Whether to use 24-hour format for the timestamp.                                                                              | `boolean`                          | `useTwentyFourHourMode` |
 | `verified`   | `verified`    | Whether the bot is verified or not. Only works if `bot` is `true`                                                             | `boolean`                          | `false`                 |
