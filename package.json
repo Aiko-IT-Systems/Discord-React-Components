@@ -22,7 +22,7 @@
 		"@sapphire/ts-config": "^5.0.0",
 		"@stencil/react-output-target": "^0.5.3",
 		"@types/node": "^18.16.19",
-		"@types/react": "18.2.28",
+		"@types/react": "18.2.29",
 		"@types/react-dom": "18.2.13",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
@@ -46,7 +46,7 @@
 	},
 	"resolutions": {
 		"minimist": "^1.2.7",
-		"@types/react": "18.2.28",
+		"@types/react": "18.2.29",
 		"@types/react-dom": "18.2.13"
 	},
 	"commitlint": {
