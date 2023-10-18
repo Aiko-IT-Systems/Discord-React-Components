@@ -23,7 +23,7 @@
 		"@stencil/react-output-target": "^0.5.3",
 		"@types/node": "^18.16.19",
 		"@types/react": "18.2.29",
-		"@types/react-dom": "18.2.13",
+		"@types/react-dom": "18.2.14",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"cz-conventional-changelog": "^3.3.0",
@@ -47,7 +47,7 @@
 	"resolutions": {
 		"minimist": "^1.2.7",
 		"@types/react": "18.2.29",
-		"@types/react-dom": "18.2.13"
+		"@types/react-dom": "18.2.14"
 	},
 	"commitlint": {
 		"extends": [
