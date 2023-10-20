@@ -14,8 +14,8 @@
 		"build:react": "yarn workspace @aitsys/discord-components-react build"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.6.6",
-		"@commitlint/config-conventional": "^17.6.6",
+		"@commitlint/cli": "^18.0.0",
+		"@commitlint/config-conventional": "^18.0.0",
 		"@lerna-lite/cli": "^2.4.2",
 		"@sapphire/eslint-config": "^5.0.0",
 		"@sapphire/prettier-config": "^2.0.0",
