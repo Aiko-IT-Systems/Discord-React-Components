@@ -8,11 +8,11 @@
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.21.4":
-  version "7.22.13"
-  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.22.13.tgz#e3c1c099402598483b7a8c46a721d1038803755e"
-  integrity sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==
+  version "7.23.4"
+  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.23.4.tgz#03ae5af150be94392cb5c7ccd97db5a19a5da6aa"
+  integrity sha512-r1IONyb6Ia+jYR2vvIDhdWdlTGhqbBoFqLTQidzZ4kepUFH15ejXvFHxCVbtl7BOXIudsIubf4E81xeA3h3IXA==
   dependencies:
-    "@babel/highlight" "^7.22.13"
+    "@babel/highlight" "^7.23.4"
     chalk "^2.4.2"
 
 "@babel/helper-validator-identifier@^7.22.20":
@@ -20,10 +20,10 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.22.20.tgz#c4ae002c61d2879e724581d96665583dbc1dc0e0"
   integrity sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==
 
-"@babel/highlight@^7.22.13":
-  version "7.22.20"
-  resolved "https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.22.20.tgz#4ca92b71d80554b01427815e06f2df965b9c1f54"
-  integrity sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg==
+"@babel/highlight@^7.23.4":
+  version "7.23.4"
+  resolved "https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.23.4.tgz#edaadf4d8232e1a961432db785091207ead0621b"
+  integrity sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A==
   dependencies:
     "@babel/helper-validator-identifier" "^7.22.20"
     chalk "^2.4.2"
@@ -336,12 +336,12 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@lerna-lite/cli@^2.4.2":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@lerna-lite/cli/-/cli-2.7.1.tgz#da3913c090aadb35632ec411b35b667c319373ab"
-  integrity sha512-nMsdEHd2aYPJYCJh/lcsWC0Awse6vtTqisnVB+WdTJF9l/Yb+5eXd7cdh7j5oWTolhGivmiOkQJdASVyoOxvCg==
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@lerna-lite/cli/-/cli-2.7.2.tgz#0961b4a093967d6750610809a33622f194e8c12b"
+  integrity sha512-NDd4wx8bJUoK+A5MUvti+fTAoP8VHn3oaLMxEcJUd3l2Qxh8JjREzK1GfjQXBjr6esVqNDpPP+2jOSlDVuV4UQ==
   dependencies:
-    "@lerna-lite/core" "2.7.1"
-    "@lerna-lite/init" "2.7.1"
+    "@lerna-lite/core" "2.7.2"
+    "@lerna-lite/init" "2.7.2"
     dedent "^1.5.1"
     dotenv "^16.3.1"
     import-local "^3.1.0"
@@ -349,10 +349,10 @@
     npmlog "^7.0.1"
     yargs "^17.7.2"
 
-"@lerna-lite/core@2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@lerna-lite/core/-/core-2.7.1.tgz#e8a18dd92d688441eb36e7188340b91e0b1f0c3d"
-  integrity sha512-lTaOOTvawNNE1dRpOzU2ukKyjzUBoYe2Nhp2gZYXeHY74EaqBc5RE34pfeULDDGqMSjbUK9PdwOlKewCl6rmow==
+"@lerna-lite/core@2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@lerna-lite/core/-/core-2.7.2.tgz#6425887501a7ea4ae195af578d46491503542805"
+  integrity sha512-jtF5UEfegU2ZY6tR6vIO9+IzGaCDfGTXd+nQwrRHa5CHP19DFTXRnsleRPA78iYfp1y8Z47SZwvIIVYpHzAxjw==
   dependencies:
     "@npmcli/run-script" "^7.0.2"
     chalk "^5.3.0"
@@ -381,12 +381,12 @@
     write-json-file "^5.0.0"
     write-pkg "^6.0.1"
 
-"@lerna-lite/init@2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@lerna-lite/init/-/init-2.7.1.tgz#5a65cba1e689083b094d245838faf222ca8a7bf2"
-  integrity sha512-tSiZEHEe1pfw4EwmX3GwvMr95nwH/pCSztLW5a3Od++nMNpb3H2bK3HmNdnUAwPUx6KKP74U7joFHL4hqYUgSA==
+"@lerna-lite/init@2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@lerna-lite/init/-/init-2.7.2.tgz#d0ff0a739cb563962ca49e97abb34ec6711f63c3"
+  integrity sha512-ilXXzQG/T7HZ+Uy8YH7uouaNMvvY0HG/9qqUVIo4IFQQJ1Y3er+3i7caSTjhtMsrS6wX+Yctku0oDU6Dc8WRRw==
   dependencies:
-    "@lerna-lite/core" "2.7.1"
+    "@lerna-lite/core" "2.7.2"
     fs-extra "^11.1.1"
     p-map "^6.0.0"
     write-json-file "^5.0.0"
