@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property  | Attribute | Description             | Type                  | Default     |
@@ -10,6 +11,7 @@
 | `guild`   | `guild`   | The guild name          | `string`              | `undefined` |
 | `icon`    | `icon`    | The icon to display.    | `string \| undefined` | `undefined` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property     | Attribute     | Description                                                                                                                   | Type                               | Default                 |
@@ -25,6 +26,7 @@
 | `verified`   | `verified`    | Whether the bot is verified or not. Only works if `bot` is `true`                                                             | `boolean`                          | `false`                 |
 | `webhook`    | `webhook`     | Whether the author is a webhook.                                                                                              | `boolean`                          | `false`                 |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

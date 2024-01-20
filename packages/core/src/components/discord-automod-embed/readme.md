@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute    | Description                                                                                                                        | Type      | Default     |
@@ -12,20 +13,20 @@
 | `userImage` | `user-image` | The user's avatar URL.                                                                                                             | `string`  | `undefined` |
 | `userName`  | `user-name`  | The user's name.                                                                                                                   | `string`  | `undefined` |
 
+
 ## Dependencies
 
 ### Depends on
 
--   [discord-mention](../discord-mention)
+- [discord-mention](../discord-mention)
 
 ### Graph
-
 ```mermaid
 graph TD;
   discord-automod-embed --> discord-mention
   style discord-automod-embed fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

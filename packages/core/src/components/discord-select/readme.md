@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute    | Description                               | Type      | Default     |
@@ -10,6 +11,7 @@
 | `emoji`     | `emoji`      | The emoji URL to use in the button.       | `string`  | `undefined` |
 | `emojiName` | `emoji-name` | The name of the emoji used in the button. | `string`  | `'emoji'`   |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

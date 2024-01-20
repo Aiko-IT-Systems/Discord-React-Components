@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute      | Description                                                                                                                                                                        | Type                                                                                                           | Default                 |
@@ -11,6 +12,7 @@
 | `twentyFour`  | `twenty-four`  | Whether to use 24-hour format for the timestamp.                                                                                                                                   | `boolean`                                                                                                      | `useTwentyFourHourMode` |
 | `type`        | `type`         | The type of system message this is, this will change the icon shown. Valid values: `join`, `leave`, `call`, `missed-call`, `boost`, `edit`, `thread`, `pin`, `alert`, and `error`. | `"alert" \| "boost" \| "call" \| "edit" \| "error" \| "join" \| "leave" \| "missed-call" \| "pin" \| "thread"` | `'join'`                |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

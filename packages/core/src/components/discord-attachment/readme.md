@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property       | Attribute       | Description                                                                            | Type                                                 | Default                |
@@ -14,6 +15,7 @@
 | `url`          | `url`           | The URL for the attachment                                                             | `string`                                             | `undefined`            |
 | `width`        | `width`         | The width of the image in pixels                                                       | `number \| undefined`                                | `undefined`            |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

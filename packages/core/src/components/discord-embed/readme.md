@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute      | Description                                                                                                                            | Type                  | Default     |
@@ -20,6 +21,7 @@
 | `videoHeight` | `video-height` | The height of the video.                                                                                                               | `number \| undefined` | `225`       |
 | `videoWidth`  | `video-width`  | The width of the video.                                                                                                                | `number \| undefined` | `400`       |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
