@@ -502,9 +502,9 @@
   integrity sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==
 
 "@stencil/core@^4.0.1":
-  version "4.12.2"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.12.2.tgz#3811a30c63b7e18a400d65ca41acb9216ad256dc"
-  integrity sha512-WEMpoqwMV4hY/ab2z9NxRhSeZwuKEugjyn6Vd+qA9xqZh6VNUL27QbP8vCa7IeqD4Zql4JBtKu3lVuBHutWE6w==
+  version "4.12.3"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.12.3.tgz#5cf5e857d3896278c7b45143f4e2207d20e3fd8c"
+  integrity sha512-9XkE9i2aXPlApMNeq3tbVHKx0eAfDc7QGyIl6t5NMuQFTOGL5Xd1soF38d+hCIDpUoUUtY7jXWg+iFrlrMzQhg==
 
 "@stencil/react-output-target@^0.5.3":
   version "0.5.3"
