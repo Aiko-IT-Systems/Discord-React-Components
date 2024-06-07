@@ -3,24 +3,24 @@
 
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.22.13":
-  version "7.24.6"
-  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.24.6.tgz#ab88da19344445c3d8889af2216606d3329f3ef2"
-  integrity sha512-ZJhac6FkEd1yhG2AHOmfcXG4ceoLltoCVJjN5XsWN9BifBQr+cHJbWi0h68HZuSORq+3WtJ2z0hwF2NG1b5kcA==
+  version "7.24.7"
+  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.24.7.tgz#882fd9e09e8ee324e496bd040401c6f046ef4465"
+  integrity sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==
   dependencies:
-    "@babel/highlight" "^7.24.6"
+    "@babel/highlight" "^7.24.7"
     picocolors "^1.0.0"
 
-"@babel/helper-validator-identifier@^7.24.6":
-  version "7.24.6"
-  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.24.6.tgz#08bb6612b11bdec78f3feed3db196da682454a5e"
-  integrity sha512-4yA7s865JHaqUdRbnaxarZREuPTHrjpDT+pXoAZ1yhyo6uFnIEpS8VMu16siFOHDpZNKYv5BObhsB//ycbICyw==
+"@babel/helper-validator-identifier@^7.24.7":
+  version "7.24.7"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.24.7.tgz#75b889cfaf9e35c2aaf42cf0d72c8e91719251db"
+  integrity sha512-rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==
 
-"@babel/highlight@^7.24.6":
-  version "7.24.6"
-  resolved "https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.24.6.tgz#6d610c1ebd2c6e061cade0153bf69b0590b7b3df"
-  integrity sha512-2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==
+"@babel/highlight@^7.24.7":
+  version "7.24.7"
+  resolved "https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.24.7.tgz#a05ab1df134b286558aae0ed41e6c5f731bf409d"
+  integrity sha512-EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==
   dependencies:
-    "@babel/helper-validator-identifier" "^7.24.6"
+    "@babel/helper-validator-identifier" "^7.24.7"
     chalk "^2.4.2"
     js-tokens "^4.0.0"
     picocolors "^1.0.0"
@@ -345,12 +345,12 @@
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
 "@lerna-lite/cli@^3.0.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@lerna-lite/cli/-/cli-3.5.0.tgz#25df3e8b224e79cee7868ad32cafd0b6c704b4d3"
-  integrity sha512-7+3A9znjBqpReSMB7jU15wS0cp6jLlHgOh2H6WXecpDUdyKJOj6ULv0UZlWX7gsPG3SYc1U9EKPWBV413sr72A==
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@lerna-lite/cli/-/cli-3.5.1.tgz#8bc74e8d29a9376f9c21417f7462e3323cdb4d3f"
+  integrity sha512-kWhjomm8iwI6MxC/Au7Mv9pztOm4QVEKR72+YQ59qfP1sVwIX6jlWNaBmszXonry34v226GDs6gDE31Vl3QHoQ==
   dependencies:
-    "@lerna-lite/core" "3.5.0"
-    "@lerna-lite/init" "3.5.0"
+    "@lerna-lite/core" "3.5.1"
+    "@lerna-lite/init" "3.5.1"
     dedent "^1.5.3"
     dotenv "^16.4.5"
     import-local "^3.1.0"
@@ -358,10 +358,10 @@
     npmlog "^7.0.1"
     yargs "^17.7.2"
 
-"@lerna-lite/core@3.5.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@lerna-lite/core/-/core-3.5.0.tgz#0abd18c0e9cd780fd2531b576ab4750636b58888"
-  integrity sha512-TFBVpPN0OjY8RR1JyFzVsdh535ZXtCaSf10fieyv9YiWFHykullm+UM/atiEpIr4LShkYf05pHBECOJ2+f+JEA==
+"@lerna-lite/core@3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@lerna-lite/core/-/core-3.5.1.tgz#9e65f3e64217361691c6a60b7de3b280d4db5fb7"
+  integrity sha512-cPOcwlEETXyraa2A0202B4GKYdlHsJ7i2YGzPY5PYrtV7AkjpETqKbQhhWzuQWXFJpdIuzuowmMeX/6XcVtorA==
   dependencies:
     "@npmcli/run-script" "^8.1.0"
     chalk "^5.3.0"
@@ -373,7 +373,7 @@
     fs-extra "^11.2.0"
     glob-parent "^6.0.2"
     globby "^14.0.1"
-    inquirer "^9.2.22"
+    inquirer "^9.2.23"
     is-ci "^3.0.1"
     json5 "^2.2.3"
     load-json-file "^7.0.1"
@@ -390,12 +390,12 @@
     write-json-file "^5.0.0"
     write-package "^7.0.1"
 
-"@lerna-lite/init@3.5.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@lerna-lite/init/-/init-3.5.0.tgz#e575683c0a2e776ca662b542048928c0edbcfaff"
-  integrity sha512-kd51wBShaYRq8Y6uVWAeBF7AsTojUsusaQmfyE8af5AcujQYzHoF/JEoM9v8gBKagXlSU24XdHBKH+QxhxclcQ==
+"@lerna-lite/init@3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@lerna-lite/init/-/init-3.5.1.tgz#6c367bfbcf2b0006536d971129cc1f88c0363155"
+  integrity sha512-N7p9ByH4OE/UaWUzz7BL51pnkNxU4tQetEMbn/4QFTh0EfFYP4OXF3zq2Y5Egs8l1Mx/iso9Ly68VHaE8aKPeQ==
   dependencies:
-    "@lerna-lite/core" "3.5.0"
+    "@lerna-lite/core" "3.5.1"
     fs-extra "^11.2.0"
     p-map "^7.0.2"
     write-json-file "^5.0.0"
@@ -2647,7 +2647,7 @@ inquirer@8.2.5:
     through "^2.3.6"
     wrap-ansi "^7.0.0"
 
-inquirer@^9.2.22:
+inquirer@^9.2.23:
   version "9.2.23"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-9.2.23.tgz#cd2fe34edca12315b624fbc3c8cb99b1c4f61f90"
   integrity sha512-kod5s+FBPIDM2xiy9fu+6wdU/SkK5le5GS9lh4FEBjBHqiMgD9lLFbCbuqFNAjNL2ZOy9Wd9F694IOzN9pZHBA==
@@ -2987,9 +2987,9 @@ iterator.prototype@^1.1.2:
     set-function-name "^2.0.1"
 
 jackspeak@^3.1.2:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.3.0.tgz#65dc7cd87522494fcb2648ec6ca684170e9e1727"
-  integrity sha512-glPiBfKguqA7v8JsXO3iLjJWZ9FV1vNpoI0I9hI9Mnk5yetO9uPLSpiCEmiVijAssv2f54HpvtzvAHfhPieiDQ==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.0.tgz#a75763ff36ad778ede6a156d8ee8b124de445b4a"
+  integrity sha512-JVYhQnN59LVPFCEcVa2C3CrEKYacvjRfqIQl+h8oi91aLYQVWRYbxjPcv1bUiUy/kLmQaANrYfNMCO3kuEDHfw==
   dependencies:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
@@ -4674,9 +4674,9 @@ type-fest@^0.21.3:
   integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
 
 type-fest@^4.6.0, type-fest@^4.7.1:
-  version "4.19.0"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.19.0.tgz#f7d3d5f55a7a118b5fe3d2eef53059cf8e516dcd"
-  integrity sha512-CN2l+hWACRiejlnr68vY0/7734Kzu+9+TOslUXbSCQ1ruY9XIHDBSceVXCcHm/oXrdzhtLMMdJEKfemf1yXiZQ==
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.20.0.tgz#019becf5a97cd58eee93f592f0961859a74482a7"
+  integrity sha512-MBh+PHUHHisjXf4tlx0CFWoMdjx8zCMLJHOjnV1prABYZFHqtFOyauCIK2/7w4oIfwkF8iNhLtnJEfVY2vn3iw==
 
 typed-array-buffer@^1.0.2:
   version "1.0.2"
