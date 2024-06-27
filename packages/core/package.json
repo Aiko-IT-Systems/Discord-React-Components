@@ -81,7 +81,7 @@
 	],
 	"devDependencies": {
 		"@sapphire/ts-config": "^5.0.0",
-		"replace-in-file": "^7.0.1",
+		"replace-in-file": "^8.0.0",
 		"rollup-plugin-node-polyfills": "^0.2.1",
 		"tslib": "^2.6.0"
 	}
