@@ -20,7 +20,7 @@
 		"@sapphire/eslint-config": "^5.0.0",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.0",
-		"@stencil/react-output-target": "^0.5.3",
+		"@stencil/react-output-target": "^0.6.0",
 		"@types/node": "^20.0.0",
 		"@types/react": "18.3.3",
 		"@types/react-dom": "18.3.0",
