@@ -21,9 +21,9 @@
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.0",
 		"@stencil/react-output-target": "^0.7.0",
-		"@types/node": "^20.0.0",
-		"@types/react": "18.3.11",
-		"@types/react-dom": "18.3.1",
+		"@types/node": "^22.0.0",
+		"@types/react": "19.0.1",
+		"@types/react-dom": "19.0.1",
 		"@typescript-eslint/eslint-plugin": "^8.0.0",
 		"@typescript-eslint/parser": "^8.0.0",
 		"cz-conventional-changelog": "^3.3.0",
@@ -39,15 +39,15 @@
 		"lint-staged": "^15.0.0",
 		"prettier": "^3.0.0",
 		"pretty-quick": "^4.0.0",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
 		"replace-in-file": "^8.0.0",
 		"typescript": "^5.1.6"
 	},
 	"resolutions": {
 		"minimist": "^1.2.7",
-		"@types/react": "18.3.11",
-		"@types/react-dom": "18.3.1"
+		"@types/react": "19.0.1",
+		"@types/react-dom": "19.0.1"
 	},
 	"commitlint": {
 		"extends": [
