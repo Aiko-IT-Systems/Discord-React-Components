@@ -633,9 +633,9 @@
     typescript "^5.4.2"
 
 "@stencil/core@^4.0.1":
-  version "4.25.3"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.25.3.tgz#5690b3347b7c90985ba56e5e8bd548ba20e191bf"
-  integrity sha512-wYSMS59jxB2ulWF8oNYOCMCo4NhGsvopn0Q7l7MBDQPRluBrodKRMfJiDV40tkJfYB4tq7o2TvgjcacH1gDNvQ==
+  version "4.26.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.26.0.tgz#0e78a134239590d3a132f3dc03eb61948d321811"
+  integrity sha512-+0Inu+dJ9/LgWSskcZwx7v17v4GILcwIYxNgD+OuK0U+D5z61WsxWw7yHkYG5OqGPBijsJMVssYRx/Tn+e7F9A==
 
 "@stencil/react-output-target@^0.8.0":
   version "0.8.2"
@@ -2165,9 +2165,9 @@ eslint@^8.57.0:
     text-table "^0.2.0"
 
 eslint@^9.0.0:
-  version "9.20.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-9.20.0.tgz#6244c46c1640cd5e577a31ebc460fca87838c0b7"
-  integrity sha512-aL4F8167Hg4IvsW89ejnpTwx+B/UQRzJPGgbIOl+4XqffWsahVVsLEWoZvnrVuwpWmnRd7XeXmQI1zlKcFDteA==
+  version "9.20.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-9.20.1.tgz#923924c078f5226832449bac86662dd7e53c91d6"
+  integrity sha512-m1mM33o6dBUjxl2qb6wv6nGNwCAsns1eKtaQ4l/NPHeTvhiUPbtdfMyktxN4B3fgHIgsYh1VT3V9txblpQHq+g==
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
     "@eslint-community/regexpp" "^4.12.1"
