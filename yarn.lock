@@ -626,9 +626,9 @@
     typescript "^5.4.2"
 
 "@stencil/core@^4.0.1":
-  version "4.26.0"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.26.0.tgz#0e78a134239590d3a132f3dc03eb61948d321811"
-  integrity sha512-+0Inu+dJ9/LgWSskcZwx7v17v4GILcwIYxNgD+OuK0U+D5z61WsxWw7yHkYG5OqGPBijsJMVssYRx/Tn+e7F9A==
+  version "4.27.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.27.0.tgz#0c0199f9f2285470f30f1743f3e744d8afad43fd"
+  integrity sha512-GOA+pvSpwL734yijTB8+LHesqPq3o/K6IaCrNoZybNVpe6lgVfvciDwPeP1XOj6JZpA/Lp8Uh3U9znoS8qgwOA==
 
 "@stencil/react-output-target@^0.8.0":
   version "0.8.2"
@@ -4254,9 +4254,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier@^3.0.0, prettier@^3.3.0:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.1.tgz#22fac9d0b18c0b92055ac8fb619ac1c7bef02fb7"
-  integrity sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.2.tgz#d066c6053200da0234bf8fa1ef45168abed8b914"
+  integrity sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==
 
 pretty-quick@^4.0.0:
   version "4.0.0"
