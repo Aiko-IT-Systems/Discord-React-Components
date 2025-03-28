@@ -16,7 +16,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.0.0",
 		"@commitlint/config-conventional": "^19.0.0",
-		"@lerna-lite/cli": "^3.0.0",
+		"@lerna-lite/cli": "^4.0.0",
 		"@sapphire/eslint-config": "^5.0.0",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.0",
