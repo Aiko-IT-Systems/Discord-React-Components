@@ -39,8 +39,8 @@
 		"lint-staged": "^15.0.0",
 		"prettier": "^3.0.0",
 		"pretty-quick": "^4.0.0",
-		"react": "19.0.0",
-		"react-dom": "19.0.0",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
 		"replace-in-file": "^8.0.0",
 		"typescript": "^5.1.6"
 	},
