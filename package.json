@@ -16,7 +16,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^20.0.0",
 		"@commitlint/config-conventional": "^20.0.0",
-		"@lerna-lite/cli": "^4.0.0",
+		"@lerna-lite/cli": "^5.0.0",
 		"@sapphire/eslint-config": "^5.0.0",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.0",
@@ -42,7 +42,7 @@
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
 		"replace-in-file": "^8.0.0",
-		"typescript": "^5.1.6"
+		"typescript": "^6.0.0"
 	},
 	"resolutions": {
 		"minimist": "^1.2.7",
